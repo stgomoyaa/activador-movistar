@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+venv/
+env/
+.venv
+temp_videos_y4m/
+*.y4m
+*.mp4
+.auto_update.lock
+*.log
+.env
+screenshots/
+.DS_Store

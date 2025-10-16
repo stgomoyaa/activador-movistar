@@ -1,0 +1,1576 @@
+[2025-10-16 15:19:48] Cargados 29 links para activación
+[2025-10-16 15:19:51] ============================================================
+INICIANDO PROCESO DE ACTIVACIÓN MASIVA (v4l2loopback)
+============================================================
+[2025-10-16 15:19:51] 🚀 INICIANDO PROCESO DE ACTIVACIÓN SECUENCIAL DE 29 TARJETAS (v4l2loopback)
+[2025-10-16 15:19:51] ✅ Dispositivo de cámara virtual /dev/video10 encontrado
+[2025-10-16 15:19:51] 📊 Procesando 1/29: UNKNOWN_89560272
+[2025-10-16 15:20:13] 📊 Progreso: 1/29 | ✅ Éxitos: 0 | ❌ Fallos: 1
+[2025-10-16 15:20:13] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:20:16] 📊 Procesando 2/29: UNKNOWN_89560272
+[2025-10-16 15:21:30] 📊 Progreso: 2/29 | ✅ Éxitos: 0 | ❌ Fallos: 2
+[2025-10-16 15:21:30] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:21:33] 📊 Procesando 3/29: UNKNOWN_89560272
+[2025-10-16 15:21:54] 📊 Progreso: 3/29 | ✅ Éxitos: 0 | ❌ Fallos: 3
+[2025-10-16 15:21:54] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:21:57] 📊 Procesando 4/29: UNKNOWN_89560272
+[2025-10-16 15:22:19] 📊 Progreso: 4/29 | ✅ Éxitos: 0 | ❌ Fallos: 4
+[2025-10-16 15:22:19] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:22:22] 📊 Procesando 5/29: UNKNOWN_89560268
+[2025-10-16 15:22:44] 📊 Progreso: 5/29 | ✅ Éxitos: 0 | ❌ Fallos: 5
+[2025-10-16 15:22:44] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:22:47] 📊 Procesando 6/29: UNKNOWN_89560272
+[2025-10-16 15:23:10] 📊 Progreso: 6/29 | ✅ Éxitos: 0 | ❌ Fallos: 6
+[2025-10-16 15:23:10] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:23:13] 📊 Procesando 7/29: UNKNOWN_89560268
+[2025-10-16 15:23:38] 📹 Reproduciendo: front.y4m
+[2025-10-16 15:23:47] 📹 Reproduciendo: back.y4m
+[2025-10-16 15:23:56] 📹 Reproduciendo: idle.y4m
+[2025-10-16 15:24:19] 📊 Progreso: 7/29 | ✅ Éxitos: 0 | ❌ Fallos: 7
+[2025-10-16 15:24:19] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:24:22] 📊 Procesando 8/29: UNKNOWN_89560272
+[2025-10-16 15:24:44] 📊 Progreso: 8/29 | ✅ Éxitos: 0 | ❌ Fallos: 8
+[2025-10-16 15:24:44] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:24:47] 📊 Procesando 9/29: 56953094851
+[2025-10-16 15:25:09] 📊 Progreso: 9/29 | ✅ Éxitos: 0 | ❌ Fallos: 9
+[2025-10-16 15:25:09] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:25:12] 📊 Procesando 10/29: 56953090225
+[2025-10-16 15:25:34] 📊 Progreso: 10/29 | ✅ Éxitos: 0 | ❌ Fallos: 10
+[2025-10-16 15:25:34] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:25:37] 📊 Procesando 11/29: 56953095541
+[2025-10-16 15:25:59] 📊 Progreso: 11/29 | ✅ Éxitos: 0 | ❌ Fallos: 11
+[2025-10-16 15:25:59] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:26:02] 📊 Procesando 12/29: 56953094982
+[2025-10-16 15:26:24] 📊 Progreso: 12/29 | ✅ Éxitos: 0 | ❌ Fallos: 12
+[2025-10-16 15:26:24] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:26:27] 📊 Procesando 13/29: 56953093430
+[2025-10-16 15:26:49] 📊 Progreso: 13/29 | ✅ Éxitos: 0 | ❌ Fallos: 13
+[2025-10-16 15:26:49] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:26:52] 📊 Procesando 14/29: UNKNOWN_89560272
+[2025-10-16 15:27:14] 📊 Progreso: 14/29 | ✅ Éxitos: 0 | ❌ Fallos: 14
+[2025-10-16 15:27:14] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:27:17] 📊 Procesando 15/29: UNKNOWN_89560272
+[2025-10-16 15:27:38] 📊 Progreso: 15/29 | ✅ Éxitos: 0 | ❌ Fallos: 15
+[2025-10-16 15:27:38] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:27:41] 📊 Procesando 16/29: UNKNOWN_89560272
+[2025-10-16 15:28:03] 📊 Progreso: 16/29 | ✅ Éxitos: 0 | ❌ Fallos: 16
+[2025-10-16 15:28:03] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:28:06] 📊 Procesando 17/29: UNKNOWN_89560272
+[2025-10-16 15:28:28] 📊 Progreso: 17/29 | ✅ Éxitos: 0 | ❌ Fallos: 17
+[2025-10-16 15:28:28] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:28:31] 📊 Procesando 18/29: UNKNOWN_89560272
+[2025-10-16 15:28:54] 📹 Reproduciendo: front.y4m
+[2025-10-16 15:29:04] 📹 Reproduciendo: back.y4m
+[2025-10-16 15:29:13] 📹 Reproduciendo: idle.y4m
+[2025-10-16 15:29:34] 📊 Progreso: 18/29 | ✅ Éxitos: 0 | ❌ Fallos: 18
+[2025-10-16 15:29:34] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:29:37] 📊 Procesando 19/29: UNKNOWN_89560272
+[2025-10-16 15:30:03] 📹 Reproduciendo: front.y4m
+[2025-10-16 15:30:12] 📹 Reproduciendo: back.y4m
+[2025-10-16 15:30:21] 📹 Reproduciendo: idle.y4m
+[2025-10-16 15:30:42] 📊 Progreso: 19/29 | ✅ Éxitos: 0 | ❌ Fallos: 19
+[2025-10-16 15:30:42] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:30:45] 📊 Procesando 20/29: 56953104218
+[2025-10-16 15:31:07] 📊 Progreso: 20/29 | ✅ Éxitos: 0 | ❌ Fallos: 20
+[2025-10-16 15:31:07] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:31:10] 📊 Procesando 21/29: UNKNOWN_89560272
+[2025-10-16 15:31:34] 📹 Reproduciendo: front.y4m
+[2025-10-16 15:31:43] 📹 Reproduciendo: back.y4m
+[2025-10-16 15:31:52] 📹 Reproduciendo: idle.y4m
+[2025-10-16 15:32:14] 📊 Progreso: 21/29 | ✅ Éxitos: 0 | ❌ Fallos: 21
+[2025-10-16 15:32:14] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:32:17] 📊 Procesando 22/29: UNKNOWN_89560272
+[2025-10-16 15:32:39] 📹 Reproduciendo: front.y4m
+[2025-10-16 15:32:48] 📹 Reproduciendo: back.y4m
+[2025-10-16 15:32:58] 📹 Reproduciendo: idle.y4m
+[2025-10-16 15:33:19] 📊 Progreso: 22/29 | ✅ Éxitos: 0 | ❌ Fallos: 22
+[2025-10-16 15:33:19] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:33:22] 📊 Procesando 23/29: 56953101132
+[2025-10-16 15:33:44] 📊 Progreso: 23/29 | ✅ Éxitos: 0 | ❌ Fallos: 23
+[2025-10-16 15:33:44] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:33:47] 📊 Procesando 24/29: 56953099157
+[2025-10-16 15:34:08] 📊 Progreso: 24/29 | ✅ Éxitos: 0 | ❌ Fallos: 24
+[2025-10-16 15:34:08] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:34:11] 📊 Procesando 25/29: 56953103873
+[2025-10-16 15:34:33] 📊 Progreso: 25/29 | ✅ Éxitos: 0 | ❌ Fallos: 25
+[2025-10-16 15:34:33] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:34:36] 📊 Procesando 26/29: 56953102888
+[2025-10-16 15:34:58] 📊 Progreso: 26/29 | ✅ Éxitos: 0 | ❌ Fallos: 26
+[2025-10-16 15:34:58] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:35:01] 📊 Procesando 27/29: UNKNOWN_89560272
+[2025-10-16 15:35:23] 📊 Progreso: 27/29 | ✅ Éxitos: 0 | ❌ Fallos: 27
+[2025-10-16 15:35:23] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:35:26] 📊 Procesando 28/29: UNKNOWN_89560272
+[2025-10-16 15:35:47] 📊 Progreso: 28/29 | ✅ Éxitos: 0 | ❌ Fallos: 28
+[2025-10-16 15:35:47] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:35:50] 📊 Procesando 29/29: UNKNOWN_89560268
+[2025-10-16 15:36:13] 📹 Reproduciendo: front.y4m
+[2025-10-16 15:36:22] 📹 Reproduciendo: back.y4m
+[2025-10-16 15:36:31] 📹 Reproduciendo: idle.y4m
+[2025-10-16 15:36:53] 📊 Progreso: 29/29 | ✅ Éxitos: 0 | ❌ Fallos: 29
+[2025-10-16 15:36:53] 🛑 Video detenido
+[2025-10-16 15:36:53] ============================================================
+PROCESO COMPLETADO - ✅0 ❌29 en 1021.7s
+============================================================
+[2025-10-16 15:40:00] Cargados 29 links para activación
+[2025-10-16 15:40:02] ============================================================
+INICIANDO PROCESO DE ACTIVACIÓN MASIVA (v4l2loopback)
+============================================================
+[2025-10-16 15:40:02] 🚀 INICIANDO PROCESO DE ACTIVACIÓN SECUENCIAL DE 29 TARJETAS (v4l2loopback)
+[2025-10-16 15:40:02] ✅ Dispositivo de cámara virtual /dev/video10 encontrado
+[2025-10-16 15:40:02] 📊 Procesando 1/29: UNKNOWN_89560272
+[2025-10-16 15:40:06] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 15:40:38] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 15:40:38] 📄 Título de página: 
+[2025-10-16 15:40:38] 📊 Progreso: 1/29 | ✅ Éxitos: 0 | ❌ Fallos: 1
+[2025-10-16 15:40:38] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:40:41] 📊 Procesando 2/29: UNKNOWN_89560272
+[2025-10-16 15:40:45] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 15:42:22] 📊 Progreso: 2/29 | ✅ Éxitos: 0 | ❌ Fallos: 2
+[2025-10-16 15:42:22] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:42:25] 📊 Procesando 3/29: UNKNOWN_89560272
+[2025-10-16 15:42:30] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 15:44:07] 📊 Progreso: 3/29 | ✅ Éxitos: 0 | ❌ Fallos: 3
+[2025-10-16 15:44:07] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:44:10] 📊 Procesando 4/29: UNKNOWN_89560272
+[2025-10-16 15:44:15] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 15:44:46] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 15:44:46] 📄 Título de página: 
+[2025-10-16 15:44:46] 📊 Progreso: 4/29 | ✅ Éxitos: 0 | ❌ Fallos: 4
+[2025-10-16 15:44:46] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:44:49] 📊 Procesando 5/29: UNKNOWN_89560268
+[2025-10-16 15:44:54] 📸 Screenshot guardado: /tmp/screenshot_rut_8956026800.png
+[2025-10-16 15:45:18] 📹 Reproduciendo: front.y4m
+[2025-10-16 15:45:27] 📹 Reproduciendo: back.y4m
+[2025-10-16 15:45:36] 📹 Reproduciendo: idle.y4m
+[2025-10-16 15:45:59] 📊 Progreso: 5/29 | ✅ Éxitos: 0 | ❌ Fallos: 5
+[2025-10-16 15:45:59] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:46:02] 📊 Procesando 6/29: UNKNOWN_89560272
+[2025-10-16 15:46:10] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 15:46:42] ❌ Timeout esperando campo RUT. URL actual: http://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 15:46:42] 📄 Título de página: 
+[2025-10-16 15:46:42] 📊 Progreso: 6/29 | ✅ Éxitos: 0 | ❌ Fallos: 6
+[2025-10-16 15:46:42] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:46:45] 📊 Procesando 7/29: UNKNOWN_89560268
+[2025-10-16 15:46:50] 📸 Screenshot guardado: /tmp/screenshot_rut_8956026800.png
+[2025-10-16 15:48:27] 📊 Progreso: 7/29 | ✅ Éxitos: 0 | ❌ Fallos: 7
+[2025-10-16 15:48:27] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:48:30] 📊 Procesando 8/29: UNKNOWN_89560272
+[2025-10-16 15:48:35] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 15:49:06] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 15:49:06] 📄 Título de página: 
+[2025-10-16 15:49:07] 📊 Progreso: 8/29 | ✅ Éxitos: 0 | ❌ Fallos: 8
+[2025-10-16 15:49:07] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:49:10] 📊 Procesando 9/29: 56953094851
+[2025-10-16 15:49:14] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 15:49:46] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 15:49:46] 📄 Título de página: 
+[2025-10-16 15:49:46] 📊 Progreso: 9/29 | ✅ Éxitos: 0 | ❌ Fallos: 9
+[2025-10-16 15:49:46] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:49:49] 📊 Procesando 10/29: 56953090225
+[2025-10-16 15:49:54] 📸 Screenshot guardado: /tmp/screenshot_rut_8956026800.png
+[2025-10-16 15:50:25] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 15:50:25] 📄 Título de página: 
+[2025-10-16 15:50:25] 📊 Progreso: 10/29 | ✅ Éxitos: 0 | ❌ Fallos: 10
+[2025-10-16 15:50:25] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:50:28] 📊 Procesando 11/29: 56953095541
+[2025-10-16 15:50:33] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 15:51:05] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 15:51:05] 📄 Título de página: 
+[2025-10-16 15:51:05] 📊 Progreso: 11/29 | ✅ Éxitos: 0 | ❌ Fallos: 11
+[2025-10-16 15:51:05] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:51:08] 📊 Procesando 12/29: 56953094982
+[2025-10-16 15:51:13] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 15:51:44] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 15:51:44] 📄 Título de página: 
+[2025-10-16 15:51:44] 📊 Progreso: 12/29 | ✅ Éxitos: 0 | ❌ Fallos: 12
+[2025-10-16 15:51:44] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:51:47] 📊 Procesando 13/29: 56953093430
+[2025-10-16 15:51:52] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 15:52:24] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 15:52:24] 📄 Título de página: 
+[2025-10-16 15:52:24] 📊 Progreso: 13/29 | ✅ Éxitos: 0 | ❌ Fallos: 13
+[2025-10-16 15:52:24] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:52:27] 📊 Procesando 14/29: UNKNOWN_89560272
+[2025-10-16 15:52:31] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 15:53:03] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 15:53:03] 📄 Título de página: 
+[2025-10-16 15:53:03] 📊 Progreso: 14/29 | ✅ Éxitos: 0 | ❌ Fallos: 14
+[2025-10-16 15:53:03] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:53:06] 📊 Procesando 15/29: UNKNOWN_89560272
+[2025-10-16 15:53:15] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 15:53:47] ❌ Timeout esperando campo RUT. URL actual: http://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 15:53:47] 📄 Título de página: 
+[2025-10-16 15:53:47] 📊 Progreso: 15/29 | ✅ Éxitos: 0 | ❌ Fallos: 15
+[2025-10-16 15:53:47] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:53:50] 📊 Procesando 16/29: UNKNOWN_89560272
+[2025-10-16 15:53:55] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 15:54:26] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 15:54:26] 📄 Título de página: 
+[2025-10-16 15:54:27] 📊 Progreso: 16/29 | ✅ Éxitos: 0 | ❌ Fallos: 16
+[2025-10-16 15:54:27] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:54:30] 📊 Procesando 17/29: UNKNOWN_89560272
+[2025-10-16 15:54:35] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 15:55:06] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 15:55:06] 📄 Título de página: 
+[2025-10-16 15:55:06] 📊 Progreso: 17/29 | ✅ Éxitos: 0 | ❌ Fallos: 17
+[2025-10-16 15:55:06] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:55:09] 📊 Procesando 18/29: UNKNOWN_89560272
+[2025-10-16 15:55:14] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 15:55:46] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 15:55:46] 📄 Título de página: 
+[2025-10-16 15:55:46] 📊 Progreso: 18/29 | ✅ Éxitos: 0 | ❌ Fallos: 18
+[2025-10-16 15:55:46] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:55:49] 📊 Procesando 19/29: UNKNOWN_89560272
+[2025-10-16 15:55:53] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 15:56:20] 📹 Reproduciendo: front.y4m
+[2025-10-16 15:56:29] 📹 Reproduciendo: back.y4m
+[2025-10-16 15:56:38] 📹 Reproduciendo: idle.y4m
+[2025-10-16 15:57:05] 📊 Progreso: 19/29 | ✅ Éxitos: 0 | ❌ Fallos: 19
+[2025-10-16 15:57:05] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:57:08] 📊 Procesando 20/29: 56953104218
+[2025-10-16 15:57:12] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 15:58:49] 📊 Progreso: 20/29 | ✅ Éxitos: 0 | ❌ Fallos: 20
+[2025-10-16 15:58:49] ⏳ Pausa de 3 segundos...
+[2025-10-16 15:58:52] 📊 Procesando 21/29: UNKNOWN_89560272
+[2025-10-16 15:58:57] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 15:59:22] 📹 Reproduciendo: front.y4m
+[2025-10-16 15:59:31] 📹 Reproduciendo: back.y4m
+[2025-10-16 15:59:41] 📹 Reproduciendo: idle.y4m
+[2025-10-16 16:00:02] 📊 Progreso: 21/29 | ✅ Éxitos: 0 | ❌ Fallos: 21
+[2025-10-16 16:00:02] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:00:05] 📊 Procesando 22/29: UNKNOWN_89560272
+[2025-10-16 16:00:10] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 16:00:41] 📹 Reproduciendo: front.y4m
+[2025-10-16 16:00:51] 📹 Reproduciendo: back.y4m
+[2025-10-16 16:01:00] 📹 Reproduciendo: idle.y4m
+[2025-10-16 16:01:21] 📊 Progreso: 22/29 | ✅ Éxitos: 0 | ❌ Fallos: 22
+[2025-10-16 16:01:21] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:01:24] 📊 Procesando 23/29: 56953101132
+[2025-10-16 16:01:29] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 16:02:00] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 16:02:00] 📄 Título de página: 
+[2025-10-16 16:02:01] 📊 Progreso: 23/29 | ✅ Éxitos: 0 | ❌ Fallos: 23
+[2025-10-16 16:02:01] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:02:04] 📊 Procesando 24/29: 56953099157
+[2025-10-16 16:02:08] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 16:02:40] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 16:02:40] 📄 Título de página: 
+[2025-10-16 16:02:40] 📊 Progreso: 24/29 | ✅ Éxitos: 0 | ❌ Fallos: 24
+[2025-10-16 16:02:40] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:02:43] 📊 Procesando 25/29: 56953103873
+[2025-10-16 16:02:48] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 16:04:25] 📊 Progreso: 25/29 | ✅ Éxitos: 0 | ❌ Fallos: 25
+[2025-10-16 16:04:25] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:04:28] 📊 Procesando 26/29: 56953102888
+[2025-10-16 16:04:32] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 16:05:04] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 16:05:04] 📄 Título de página: 
+[2025-10-16 16:05:04] 📊 Progreso: 26/29 | ✅ Éxitos: 0 | ❌ Fallos: 26
+[2025-10-16 16:05:04] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:05:07] 📊 Procesando 27/29: UNKNOWN_89560272
+[2025-10-16 16:05:12] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 16:05:37] 📹 Reproduciendo: front.y4m
+[2025-10-16 16:05:46] 📹 Reproduciendo: back.y4m
+[2025-10-16 16:05:55] 📹 Reproduciendo: idle.y4m
+[2025-10-16 16:06:17] 📊 Progreso: 27/29 | ✅ Éxitos: 0 | ❌ Fallos: 27
+[2025-10-16 16:06:17] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:06:20] 📊 Procesando 28/29: UNKNOWN_89560272
+[2025-10-16 16:06:24] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 16:08:01] 📊 Progreso: 28/29 | ✅ Éxitos: 0 | ❌ Fallos: 28
+[2025-10-16 16:08:01] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:08:04] 📊 Procesando 29/29: UNKNOWN_89560268
+[2025-10-16 16:08:09] 📸 Screenshot guardado: /tmp/screenshot_rut_8956026800.png
+[2025-10-16 16:08:35] 📹 Reproduciendo: front.y4m
+[2025-10-16 16:08:44] 📹 Reproduciendo: back.y4m
+[2025-10-16 16:08:53] 📹 Reproduciendo: idle.y4m
+[2025-10-16 16:09:14] 📊 Progreso: 29/29 | ✅ Éxitos: 0 | ❌ Fallos: 29
+[2025-10-16 16:09:14] 🛑 Video detenido
+[2025-10-16 16:09:14] ============================================================
+PROCESO COMPLETADO - ✅0 ❌29 en 1752.5s
+============================================================
+[2025-10-16 16:34:51] Cargados 29 links para activación
+[2025-10-16 16:34:59] ============================================================
+INICIANDO PROCESO DE ACTIVACIÓN MASIVA (v4l2loopback)
+============================================================
+[2025-10-16 16:34:59] 🚀 INICIANDO PROCESO DE ACTIVACIÓN SECUENCIAL DE 29 TARJETAS (v4l2loopback)
+[2025-10-16 16:34:59] ✅ Dispositivo de cámara virtual /dev/video10 encontrado
+[2025-10-16 16:34:59] 📊 Procesando 1/29: UNKNOWN_89560272
+[2025-10-16 16:35:04] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 16:35:35] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 16:35:35] 📄 Título de página: 
+[2025-10-16 16:35:35] 📊 Progreso: 1/29 | ✅ Éxitos: 0 | ❌ Fallos: 1
+[2025-10-16 16:35:35] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:35:38] 📊 Procesando 2/29: UNKNOWN_89560272
+[2025-10-16 16:35:43] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 16:36:15] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 16:36:15] 📄 Título de página: 
+[2025-10-16 16:36:15] 📊 Progreso: 2/29 | ✅ Éxitos: 0 | ❌ Fallos: 2
+[2025-10-16 16:36:15] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:36:18] 📊 Procesando 3/29: UNKNOWN_89560272
+[2025-10-16 16:36:22] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 16:36:54] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 16:36:54] 📄 Título de página: 
+[2025-10-16 16:36:54] 📊 Progreso: 3/29 | ✅ Éxitos: 0 | ❌ Fallos: 3
+[2025-10-16 16:36:54] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:36:57] 📊 Procesando 4/29: UNKNOWN_89560272
+[2025-10-16 16:37:02] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 16:37:29] 📹 Reproduciendo: front.y4m
+[2025-10-16 16:37:38] 📹 Reproduciendo: back.y4m
+[2025-10-16 16:37:47] 📹 Reproduciendo: idle.y4m
+[2025-10-16 16:38:08] 📊 Progreso: 4/29 | ✅ Éxitos: 0 | ❌ Fallos: 4
+[2025-10-16 16:38:08] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:38:11] 📊 Procesando 5/29: UNKNOWN_89560268
+[2025-10-16 16:38:16] 📸 Screenshot guardado: /tmp/screenshot_rut_8956026800.png
+[2025-10-16 16:39:53] 📊 Progreso: 5/29 | ✅ Éxitos: 0 | ❌ Fallos: 5
+[2025-10-16 16:39:53] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:39:56] 📊 Procesando 6/29: UNKNOWN_89560272
+[2025-10-16 16:40:01] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 16:40:32] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 16:40:32] 📄 Título de página: 
+[2025-10-16 16:40:32] 📊 Progreso: 6/29 | ✅ Éxitos: 0 | ❌ Fallos: 6
+[2025-10-16 16:40:32] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:40:35] 📊 Procesando 7/29: UNKNOWN_89560268
+[2025-10-16 16:40:40] 📸 Screenshot guardado: /tmp/screenshot_rut_8956026800.png
+[2025-10-16 16:41:06] 📹 Reproduciendo: front.y4m
+[2025-10-16 16:41:15] 📹 Reproduciendo: back.y4m
+[2025-10-16 16:41:24] 📹 Reproduciendo: idle.y4m
+[2025-10-16 16:41:45] 📊 Progreso: 7/29 | ✅ Éxitos: 0 | ❌ Fallos: 7
+[2025-10-16 16:41:45] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:41:48] 📊 Procesando 8/29: UNKNOWN_89560272
+[2025-10-16 16:41:52] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 16:42:24] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 16:42:24] 📄 Título de página: 
+[2025-10-16 16:42:24] 📊 Progreso: 8/29 | ✅ Éxitos: 0 | ❌ Fallos: 8
+[2025-10-16 16:42:24] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:42:27] 📊 Procesando 9/29: 56953094851
+[2025-10-16 16:42:32] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 16:43:04] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 16:43:04] 📄 Título de página: 
+[2025-10-16 16:43:04] 📊 Progreso: 9/29 | ✅ Éxitos: 0 | ❌ Fallos: 9
+[2025-10-16 16:43:04] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:43:07] 📊 Procesando 10/29: 56953090225
+[2025-10-16 16:44:08] 📊 Progreso: 10/29 | ✅ Éxitos: 0 | ❌ Fallos: 10
+[2025-10-16 16:44:08] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:44:11] 📊 Procesando 11/29: 56953095541
+[2025-10-16 16:44:51] 📊 Progreso: 11/29 | ✅ Éxitos: 0 | ❌ Fallos: 11
+[2025-10-16 16:44:51] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:44:54] 📊 Procesando 12/29: 56953094982
+[2025-10-16 16:45:06] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 16:45:38] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 16:45:38] 📄 Título de página: 
+[2025-10-16 16:45:38] 📊 Progreso: 12/29 | ✅ Éxitos: 0 | ❌ Fallos: 12
+[2025-10-16 16:45:38] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:45:41] 📊 Procesando 13/29: 56953093430
+[2025-10-16 16:45:49] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 16:46:21] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 16:46:21] 📄 Título de página: 
+[2025-10-16 16:46:21] 📊 Progreso: 13/29 | ✅ Éxitos: 0 | ❌ Fallos: 13
+[2025-10-16 16:46:21] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:46:24] 📊 Procesando 14/29: UNKNOWN_89560272
+[2025-10-16 16:46:33] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 16:47:05] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 16:47:05] 📄 Título de página: 
+[2025-10-16 16:47:05] 📊 Progreso: 14/29 | ✅ Éxitos: 0 | ❌ Fallos: 14
+[2025-10-16 16:47:05] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:47:08] 📊 Procesando 15/29: UNKNOWN_89560272
+[2025-10-16 16:47:18] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 16:47:50] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 16:47:50] 📄 Título de página: 
+[2025-10-16 16:47:50] 📊 Progreso: 15/29 | ✅ Éxitos: 0 | ❌ Fallos: 15
+[2025-10-16 16:47:50] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:47:53] 📊 Procesando 16/29: UNKNOWN_89560272
+[2025-10-16 16:48:03] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 16:48:34] ❌ Timeout esperando campo RUT. URL actual: https://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 16:48:34] 📄 Título de página: 
+[2025-10-16 16:48:35] 📊 Progreso: 16/29 | ✅ Éxitos: 0 | ❌ Fallos: 16
+[2025-10-16 16:48:35] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:48:38] 📊 Procesando 17/29: UNKNOWN_89560272
+[2025-10-16 16:49:14] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 16:49:45] ❌ Timeout esperando campo RUT. URL actual: http://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 16:49:45] 📄 Título de página: 
+[2025-10-16 16:49:45] 📊 Progreso: 17/29 | ✅ Éxitos: 0 | ❌ Fallos: 17
+[2025-10-16 16:49:45] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:49:48] 📊 Procesando 18/29: UNKNOWN_89560272
+[2025-10-16 16:50:33] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 16:51:05] ❌ Timeout esperando campo RUT. URL actual: http://mi1.portal.movistar.cl/static/index.html
+[2025-10-16 16:51:05] 📄 Título de página: 
+[2025-10-16 16:51:05] 📊 Progreso: 18/29 | ✅ Éxitos: 0 | ❌ Fallos: 18
+[2025-10-16 16:51:05] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:51:08] 📊 Procesando 19/29: UNKNOWN_89560272
+[2025-10-16 16:52:09] 📊 Progreso: 19/29 | ✅ Éxitos: 0 | ❌ Fallos: 19
+[2025-10-16 16:52:09] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:52:12] 📊 Procesando 20/29: 56953104218
+[2025-10-16 16:53:13] 📊 Progreso: 20/29 | ✅ Éxitos: 0 | ❌ Fallos: 20
+[2025-10-16 16:53:13] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:53:16] 📊 Procesando 21/29: UNKNOWN_89560272
+[2025-10-16 16:54:17] 📊 Progreso: 21/29 | ✅ Éxitos: 0 | ❌ Fallos: 21
+[2025-10-16 16:54:17] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:54:20] 📊 Procesando 22/29: UNKNOWN_89560272
+[2025-10-16 16:55:21] 📊 Progreso: 22/29 | ✅ Éxitos: 0 | ❌ Fallos: 22
+[2025-10-16 16:55:21] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:55:24] 📊 Procesando 23/29: 56953101132
+[2025-10-16 16:56:25] 📊 Progreso: 23/29 | ✅ Éxitos: 0 | ❌ Fallos: 23
+[2025-10-16 16:56:25] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:56:28] 📊 Procesando 24/29: 56953099157
+[2025-10-16 16:57:29] 📊 Progreso: 24/29 | ✅ Éxitos: 0 | ❌ Fallos: 24
+[2025-10-16 16:57:29] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:57:32] 📊 Procesando 25/29: 56953103873
+[2025-10-16 16:58:33] 📊 Progreso: 25/29 | ✅ Éxitos: 0 | ❌ Fallos: 25
+[2025-10-16 16:58:33] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:58:36] 📊 Procesando 26/29: 56953102888
+[2025-10-16 16:59:37] 📊 Progreso: 26/29 | ✅ Éxitos: 0 | ❌ Fallos: 26
+[2025-10-16 16:59:37] ⏳ Pausa de 3 segundos...
+[2025-10-16 16:59:40] 📊 Procesando 27/29: UNKNOWN_89560272
+[2025-10-16 17:00:41] 📊 Progreso: 27/29 | ✅ Éxitos: 0 | ❌ Fallos: 27
+[2025-10-16 17:00:41] ⏳ Pausa de 3 segundos...
+[2025-10-16 17:00:44] 📊 Procesando 28/29: UNKNOWN_89560272
+[2025-10-16 17:01:45] 📊 Progreso: 28/29 | ✅ Éxitos: 0 | ❌ Fallos: 28
+[2025-10-16 17:01:45] ⏳ Pausa de 3 segundos...
+[2025-10-16 17:01:48] 📊 Procesando 29/29: UNKNOWN_89560268
+[2025-10-16 17:02:29] 📊 Progreso: 29/29 | ✅ Éxitos: 0 | ❌ Fallos: 29
+[2025-10-16 17:02:29] 🛑 Video detenido
+[2025-10-16 17:02:29] ============================================================
+PROCESO COMPLETADO - ✅0 ❌29 en 1649.7s
+============================================================
+[2025-10-16 19:16:34] Cargados 29 links para activación
+[2025-10-16 19:19:11] Cargados 5 links para activación
+[2025-10-16 19:19:26] ============================================================
+INICIANDO PROCESO DE ACTIVACIÓN MASIVA (v4l2loopback)
+============================================================
+[2025-10-16 19:19:26] 🚀 INICIANDO PROCESO DE ACTIVACIÓN SECUENCIAL DE 5 TARJETAS (v4l2loopback)
+[2025-10-16 19:19:26] ✅ Dispositivo de cámara virtual /dev/video10 encontrado
+[2025-10-16 19:19:26] 📊 Procesando 1/5: UNKNOWN_89560272
+[2025-10-16 19:19:31] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 19:19:58] 📹 Reproduciendo: front.y4m
+[2025-10-16 19:20:07] 📹 Reproduciendo: back.y4m
+[2025-10-16 19:20:17] 📹 Reproduciendo: idle.y4m
+[2025-10-16 19:20:38] 📊 Progreso: 1/5 | ✅ Éxitos: 0 | ❌ Fallos: 1
+[2025-10-16 19:20:38] ⏳ Pausa de 3 segundos...
+[2025-10-16 19:20:41] 📊 Procesando 2/5: UNKNOWN_89560272
+[2025-10-16 19:20:46] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 19:21:16] 📹 Reproduciendo: front.y4m
+[2025-10-16 19:21:25] 📹 Reproduciendo: back.y4m
+[2025-10-16 19:21:34] 📹 Reproduciendo: idle.y4m
+[2025-10-16 19:21:55] 📊 Progreso: 2/5 | ✅ Éxitos: 0 | ❌ Fallos: 2
+[2025-10-16 19:21:55] ⏳ Pausa de 3 segundos...
+[2025-10-16 19:21:58] 📊 Procesando 3/5: UNKNOWN_89560272
+[2025-10-16 19:22:03] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 19:22:29] 📹 Reproduciendo: front.y4m
+[2025-10-16 19:22:38] 📹 Reproduciendo: back.y4m
+[2025-10-16 19:22:48] 📹 Reproduciendo: idle.y4m
+[2025-10-16 19:23:09] 📊 Progreso: 3/5 | ✅ Éxitos: 0 | ❌ Fallos: 3
+[2025-10-16 19:23:09] ⏳ Pausa de 3 segundos...
+[2025-10-16 19:23:12] 📊 Procesando 4/5: UNKNOWN_89560268
+[2025-10-16 19:23:17] 📸 Screenshot guardado: /tmp/screenshot_rut_8956026800.png
+[2025-10-16 19:23:44] 📹 Reproduciendo: front.y4m
+[2025-10-16 19:23:53] 📹 Reproduciendo: back.y4m
+[2025-10-16 19:24:02] 📹 Reproduciendo: idle.y4m
+[2025-10-16 19:24:27] 📊 Progreso: 4/5 | ✅ Éxitos: 0 | ❌ Fallos: 4
+[2025-10-16 19:24:27] ⏳ Pausa de 3 segundos...
+[2025-10-16 19:24:30] 📊 Procesando 5/5: UNKNOWN_89560272
+[2025-10-16 19:24:35] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 19:25:02] 📹 Reproduciendo: front.y4m
+[2025-10-16 19:25:11] 📹 Reproduciendo: back.y4m
+[2025-10-16 19:25:21] 📹 Reproduciendo: idle.y4m
+[2025-10-16 19:25:42] 📊 Progreso: 5/5 | ✅ Éxitos: 0 | ❌ Fallos: 5
+[2025-10-16 19:25:42] 🛑 Video detenido
+[2025-10-16 19:25:42] ============================================================
+PROCESO COMPLETADO - ✅0 ❌5 en 376.4s
+============================================================
+[2025-10-16 19:36:17] Cargados 5 links para activación
+[2025-10-16 19:36:19] ============================================================
+INICIANDO PROCESO DE ACTIVACIÓN MASIVA (v4l2loopback)
+============================================================
+[2025-10-16 19:36:19] 🚀 INICIANDO PROCESO DE ACTIVACIÓN SECUENCIAL DE 5 TARJETAS (v4l2loopback)
+[2025-10-16 19:36:19] ✅ Dispositivo de cámara virtual /dev/video10 encontrado
+[2025-10-16 19:36:19] 📊 Procesando 1/5: UNKNOWN_89560272
+[2025-10-16 19:36:24] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 19:36:57] 📹 Reproduciendo: front.y4m
+[2025-10-16 19:37:07] 📹 Reproduciendo: back.y4m
+[2025-10-16 19:37:16] 📹 Reproduciendo: idle.y4m
+[2025-10-16 19:37:38] 📊 Progreso: 1/5 | ✅ Éxitos: 0 | ❌ Fallos: 1
+[2025-10-16 19:37:38] ⏳ Pausa de 3 segundos...
+[2025-10-16 19:37:41] 📊 Procesando 2/5: UNKNOWN_89560272
+[2025-10-16 19:37:46] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 19:38:13] 📹 Reproduciendo: front.y4m
+[2025-10-16 19:38:22] 📹 Reproduciendo: back.y4m
+[2025-10-16 19:38:31] 📹 Reproduciendo: idle.y4m
+[2025-10-16 19:38:53] 📊 Progreso: 2/5 | ✅ Éxitos: 0 | ❌ Fallos: 2
+[2025-10-16 19:38:53] ⏳ Pausa de 3 segundos...
+[2025-10-16 19:38:56] 📊 Procesando 3/5: UNKNOWN_89560272
+[2025-10-16 19:39:01] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 19:39:31] 📹 Reproduciendo: front.y4m
+[2025-10-16 19:39:40] 📹 Reproduciendo: back.y4m
+[2025-10-16 19:39:50] 📹 Reproduciendo: idle.y4m
+[2025-10-16 19:40:12] 📊 Progreso: 3/5 | ✅ Éxitos: 0 | ❌ Fallos: 3
+[2025-10-16 19:40:12] ⏳ Pausa de 3 segundos...
+[2025-10-16 19:40:15] 📊 Procesando 4/5: UNKNOWN_89560268
+[2025-10-16 19:40:25] 📸 Screenshot guardado: /tmp/screenshot_rut_8956026800.png
+[2025-10-16 19:40:52] 📹 Reproduciendo: front.y4m
+[2025-10-16 19:41:01] 📹 Reproduciendo: back.y4m
+[2025-10-16 19:41:10] 📹 Reproduciendo: idle.y4m
+[2025-10-16 19:41:32] 📊 Progreso: 4/5 | ✅ Éxitos: 0 | ❌ Fallos: 4
+[2025-10-16 19:41:32] ⏳ Pausa de 3 segundos...
+[2025-10-16 19:41:35] 📊 Procesando 5/5: UNKNOWN_89560272
+[2025-10-16 19:41:43] 📸 Screenshot guardado: /tmp/screenshot_rut_8956027200.png
+[2025-10-16 19:42:36] 📹 Reproduciendo: front.y4m
+[2025-10-16 19:42:45] 📹 Reproduciendo: back.y4m
+[2025-10-16 19:42:54] 📹 Reproduciendo: idle.y4m
+[2025-10-16 19:43:16] 📊 Progreso: 5/5 | ✅ Éxitos: 0 | ❌ Fallos: 5
+[2025-10-16 19:43:16] 🛑 Video detenido
+[2025-10-16 19:43:16] ============================================================
+PROCESO COMPLETADO - ✅0 ❌5 en 417.3s
+============================================================
+[2025-10-16 19:58:40] Cargados 5 links para activación
+[2025-10-16 19:58:41] ============================================================
+INICIANDO PROCESO DE ACTIVACIÓN MASIVA (v4l2loopback)
+============================================================
+[2025-10-16 19:58:41] 🚀 INICIANDO PROCESO DE ACTIVACIÓN SECUENCIAL DE 5 TARJETAS (v4l2loopback)
+[2025-10-16 19:58:41] ✅ Dispositivo de cámara virtual /dev/video10 encontrado
+[2025-10-16 19:58:41] 📊 Procesando 1/5: UNKNOWN_89560272
+[2025-10-16 19:58:43] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x55e637e1d95a <unknown>
+#1 0x55e6378be536 <unknown>
+#2 0x55e6378f8a93 <unknown>
+#3 0x55e6378f4cdf <unknown>
+#4 0x55e637943fa9 <unknown>
+#5 0x55e6379436b6 <unknown>
+#6 0x55e6379354f3 <unknown>
+#7 0x55e6379019c8 <unknown>
+#8 0x55e637902661 <unknown>
+#9 0x55e637de28df <unknown>
+#10 0x55e637de6a28 <unknown>
+#11 0x55e637dc999c <unknown>
+#12 0x55e637de71ee <unknown>
+#13 0x55e637db152e <unknown>
+#14 0x55e637e0abe8 <unknown>
+#15 0x55e637e0adff <unknown>
+#16 0x55e637e1c44c <unknown>
+#17 0x74f825b5cac3 <unknown>
+
+[2025-10-16 19:58:43] 📊 Progreso: 1/5 | ✅ Éxitos: 0 | ❌ Fallos: 1
+[2025-10-16 19:58:43] ⏳ Pausa de 3 segundos...
+[2025-10-16 19:58:46] 📊 Procesando 2/5: UNKNOWN_89560272
+[2025-10-16 19:58:47] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x615d59d8195a <unknown>
+#1 0x615d59822536 <unknown>
+#2 0x615d5985ca93 <unknown>
+#3 0x615d59858cdf <unknown>
+#4 0x615d598a7fa9 <unknown>
+#5 0x615d598a76b6 <unknown>
+#6 0x615d598994f3 <unknown>
+#7 0x615d598659c8 <unknown>
+#8 0x615d59866661 <unknown>
+#9 0x615d59d468df <unknown>
+#10 0x615d59d4aa28 <unknown>
+#11 0x615d59d2d99c <unknown>
+#12 0x615d59d4b1ee <unknown>
+#13 0x615d59d1552e <unknown>
+#14 0x615d59d6ebe8 <unknown>
+#15 0x615d59d6edff <unknown>
+#16 0x615d59d8044c <unknown>
+#17 0x738e7ff15ac3 <unknown>
+
+[2025-10-16 19:58:47] 📊 Progreso: 2/5 | ✅ Éxitos: 0 | ❌ Fallos: 2
+[2025-10-16 19:58:47] ⏳ Pausa de 3 segundos...
+[2025-10-16 19:58:50] 📊 Procesando 3/5: UNKNOWN_89560272
+[2025-10-16 19:58:51] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x5e6bdd83895a <unknown>
+#1 0x5e6bdd2d9536 <unknown>
+#2 0x5e6bdd313a93 <unknown>
+#3 0x5e6bdd30fcdf <unknown>
+#4 0x5e6bdd35efa9 <unknown>
+#5 0x5e6bdd35e6b6 <unknown>
+#6 0x5e6bdd3504f3 <unknown>
+#7 0x5e6bdd31c9c8 <unknown>
+#8 0x5e6bdd31d661 <unknown>
+#9 0x5e6bdd7fd8df <unknown>
+#10 0x5e6bdd801a28 <unknown>
+#11 0x5e6bdd7e499c <unknown>
+#12 0x5e6bdd8021ee <unknown>
+#13 0x5e6bdd7cc52e <unknown>
+#14 0x5e6bdd825be8 <unknown>
+#15 0x5e6bdd825dff <unknown>
+#16 0x5e6bdd83744c <unknown>
+#17 0x7a20c3977ac3 <unknown>
+
+[2025-10-16 19:58:51] 📊 Progreso: 3/5 | ✅ Éxitos: 0 | ❌ Fallos: 3
+[2025-10-16 19:58:51] ⏳ Pausa de 3 segundos...
+[2025-10-16 19:58:54] 📊 Procesando 4/5: UNKNOWN_89560268
+[2025-10-16 19:58:55] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x5589d9b2d95a <unknown>
+#1 0x5589d95ce536 <unknown>
+#2 0x5589d9608a93 <unknown>
+#3 0x5589d9604cdf <unknown>
+#4 0x5589d9653fa9 <unknown>
+#5 0x5589d96536b6 <unknown>
+#6 0x5589d96454f3 <unknown>
+#7 0x5589d96119c8 <unknown>
+#8 0x5589d9612661 <unknown>
+#9 0x5589d9af28df <unknown>
+#10 0x5589d9af6a28 <unknown>
+#11 0x5589d9ad999c <unknown>
+#12 0x5589d9af71ee <unknown>
+#13 0x5589d9ac152e <unknown>
+#14 0x5589d9b1abe8 <unknown>
+#15 0x5589d9b1adff <unknown>
+#16 0x5589d9b2c44c <unknown>
+#17 0x769af32d7ac3 <unknown>
+
+[2025-10-16 19:58:55] 📊 Progreso: 4/5 | ✅ Éxitos: 0 | ❌ Fallos: 4
+[2025-10-16 19:58:55] ⏳ Pausa de 3 segundos...
+[2025-10-16 19:58:58] 📊 Procesando 5/5: UNKNOWN_89560272
+[2025-10-16 19:59:00] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x5e86a572895a <unknown>
+#1 0x5e86a51c9536 <unknown>
+#2 0x5e86a5203a93 <unknown>
+#3 0x5e86a51ffcdf <unknown>
+#4 0x5e86a524efa9 <unknown>
+#5 0x5e86a524e6b6 <unknown>
+#6 0x5e86a52404f3 <unknown>
+#7 0x5e86a520c9c8 <unknown>
+#8 0x5e86a520d661 <unknown>
+#9 0x5e86a56ed8df <unknown>
+#10 0x5e86a56f1a28 <unknown>
+#11 0x5e86a56d499c <unknown>
+#12 0x5e86a56f21ee <unknown>
+#13 0x5e86a56bc52e <unknown>
+#14 0x5e86a5715be8 <unknown>
+#15 0x5e86a5715dff <unknown>
+#16 0x5e86a572744c <unknown>
+#17 0x7cadcad53ac3 <unknown>
+
+[2025-10-16 19:59:00] 📊 Progreso: 5/5 | ✅ Éxitos: 0 | ❌ Fallos: 5
+[2025-10-16 19:59:00] ============================================================
+PROCESO COMPLETADO - ✅0 ❌5 en 18.1s
+============================================================
+[2025-10-16 20:01:43] Cargados 5 links para activación
+[2025-10-16 20:01:45] ============================================================
+INICIANDO PROCESO DE ACTIVACIÓN MASIVA (v4l2loopback)
+============================================================
+[2025-10-16 20:01:45] 🚀 INICIANDO PROCESO DE ACTIVACIÓN SECUENCIAL DE 5 TARJETAS (v4l2loopback)
+[2025-10-16 20:01:45] ✅ Dispositivo de cámara virtual /dev/video10 encontrado
+[2025-10-16 20:01:45] 📊 Procesando 1/5: UNKNOWN_89560272
+[2025-10-16 20:01:47] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x62b402ad095a <unknown>
+#1 0x62b402571536 <unknown>
+#2 0x62b4025aba93 <unknown>
+#3 0x62b4025a7cdf <unknown>
+#4 0x62b4025f6fa9 <unknown>
+#5 0x62b4025f66b6 <unknown>
+#6 0x62b4025e84f3 <unknown>
+#7 0x62b4025b49c8 <unknown>
+#8 0x62b4025b5661 <unknown>
+#9 0x62b402a958df <unknown>
+#10 0x62b402a99a28 <unknown>
+#11 0x62b402a7c99c <unknown>
+#12 0x62b402a9a1ee <unknown>
+#13 0x62b402a6452e <unknown>
+#14 0x62b402abdbe8 <unknown>
+#15 0x62b402abddff <unknown>
+#16 0x62b402acf44c <unknown>
+#17 0x743ae9fc1ac3 <unknown>
+
+[2025-10-16 20:01:47] 📊 Progreso: 1/5 | ✅ Éxitos: 0 | ❌ Fallos: 1
+[2025-10-16 20:01:47] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:01:50] 📊 Procesando 2/5: UNKNOWN_89560272
+[2025-10-16 20:01:52] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x6195dd5e795a <unknown>
+#1 0x6195dd088536 <unknown>
+#2 0x6195dd0c2a93 <unknown>
+#3 0x6195dd0becdf <unknown>
+#4 0x6195dd10dfa9 <unknown>
+#5 0x6195dd10d6b6 <unknown>
+#6 0x6195dd0ff4f3 <unknown>
+#7 0x6195dd0cb9c8 <unknown>
+#8 0x6195dd0cc661 <unknown>
+#9 0x6195dd5ac8df <unknown>
+#10 0x6195dd5b0a28 <unknown>
+#11 0x6195dd59399c <unknown>
+#12 0x6195dd5b11ee <unknown>
+#13 0x6195dd57b52e <unknown>
+#14 0x6195dd5d4be8 <unknown>
+#15 0x6195dd5d4dff <unknown>
+#16 0x6195dd5e644c <unknown>
+#17 0x74d7e7a78ac3 <unknown>
+
+[2025-10-16 20:01:52] 📊 Progreso: 2/5 | ✅ Éxitos: 0 | ❌ Fallos: 2
+[2025-10-16 20:01:52] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:01:55] 📊 Procesando 3/5: UNKNOWN_89560272
+[2025-10-16 20:01:57] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x5dce47d3e95a <unknown>
+#1 0x5dce477df536 <unknown>
+#2 0x5dce47819a93 <unknown>
+#3 0x5dce47815cdf <unknown>
+#4 0x5dce47864fa9 <unknown>
+#5 0x5dce478646b6 <unknown>
+#6 0x5dce478564f3 <unknown>
+#7 0x5dce478229c8 <unknown>
+#8 0x5dce47823661 <unknown>
+#9 0x5dce47d038df <unknown>
+#10 0x5dce47d07a28 <unknown>
+#11 0x5dce47cea99c <unknown>
+#12 0x5dce47d081ee <unknown>
+#13 0x5dce47cd252e <unknown>
+#14 0x5dce47d2bbe8 <unknown>
+#15 0x5dce47d2bdff <unknown>
+#16 0x5dce47d3d44c <unknown>
+#17 0x7660f0cffac3 <unknown>
+
+[2025-10-16 20:01:57] 📊 Progreso: 3/5 | ✅ Éxitos: 0 | ❌ Fallos: 3
+[2025-10-16 20:01:57] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:02:00] 📊 Procesando 4/5: UNKNOWN_89560268
+[2025-10-16 20:02:01] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x61ca6ad9795a <unknown>
+#1 0x61ca6a838536 <unknown>
+#2 0x61ca6a872a93 <unknown>
+#3 0x61ca6a86ecdf <unknown>
+#4 0x61ca6a8bdfa9 <unknown>
+#5 0x61ca6a8bd6b6 <unknown>
+#6 0x61ca6a8af4f3 <unknown>
+#7 0x61ca6a87b9c8 <unknown>
+#8 0x61ca6a87c661 <unknown>
+#9 0x61ca6ad5c8df <unknown>
+#10 0x61ca6ad60a28 <unknown>
+#11 0x61ca6ad4399c <unknown>
+#12 0x61ca6ad611ee <unknown>
+#13 0x61ca6ad2b52e <unknown>
+#14 0x61ca6ad84be8 <unknown>
+#15 0x61ca6ad84dff <unknown>
+#16 0x61ca6ad9644c <unknown>
+#17 0x7745e13c6ac3 <unknown>
+
+[2025-10-16 20:02:01] 📊 Progreso: 4/5 | ✅ Éxitos: 0 | ❌ Fallos: 4
+[2025-10-16 20:02:01] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:02:04] 📊 Procesando 5/5: UNKNOWN_89560272
+[2025-10-16 20:02:06] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x59f5cad5495a <unknown>
+#1 0x59f5ca7f5536 <unknown>
+#2 0x59f5ca82fa93 <unknown>
+#3 0x59f5ca82bcdf <unknown>
+#4 0x59f5ca87afa9 <unknown>
+#5 0x59f5ca87a6b6 <unknown>
+#6 0x59f5ca86c4f3 <unknown>
+#7 0x59f5ca8389c8 <unknown>
+#8 0x59f5ca839661 <unknown>
+#9 0x59f5cad198df <unknown>
+#10 0x59f5cad1da28 <unknown>
+#11 0x59f5cad0099c <unknown>
+#12 0x59f5cad1e1ee <unknown>
+#13 0x59f5cace852e <unknown>
+#14 0x59f5cad41be8 <unknown>
+#15 0x59f5cad41dff <unknown>
+#16 0x59f5cad5344c <unknown>
+#17 0x70f73abf1ac3 <unknown>
+
+[2025-10-16 20:02:06] 📊 Progreso: 5/5 | ✅ Éxitos: 0 | ❌ Fallos: 5
+[2025-10-16 20:02:06] ============================================================
+PROCESO COMPLETADO - ✅0 ❌5 en 20.6s
+============================================================
+[2025-10-16 20:09:01] Cargados 5 links para activación
+[2025-10-16 20:09:08] ============================================================
+INICIANDO PROCESO DE ACTIVACIÓN MASIVA (v4l2loopback)
+============================================================
+[2025-10-16 20:09:08] 🚀 INICIANDO PROCESO DE ACTIVACIÓN SECUENCIAL DE 5 TARJETAS (v4l2loopback)
+[2025-10-16 20:09:08] ✅ Dispositivo de cámara virtual /dev/video10 encontrado
+[2025-10-16 20:09:08] 📊 Procesando 1/5: UNKNOWN_89560272
+[2025-10-16 20:09:09] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x58867255495a <unknown>
+#1 0x588671ff5536 <unknown>
+#2 0x58867202fa93 <unknown>
+#3 0x58867202bcdf <unknown>
+#4 0x58867207afa9 <unknown>
+#5 0x58867207a6b6 <unknown>
+#6 0x58867206c4f3 <unknown>
+#7 0x5886720389c8 <unknown>
+#8 0x588672039661 <unknown>
+#9 0x5886725198df <unknown>
+#10 0x58867251da28 <unknown>
+#11 0x58867250099c <unknown>
+#12 0x58867251e1ee <unknown>
+#13 0x5886724e852e <unknown>
+#14 0x588672541be8 <unknown>
+#15 0x588672541dff <unknown>
+#16 0x58867255344c <unknown>
+#17 0x7ceef6841ac3 <unknown>
+
+[2025-10-16 20:09:09] 📊 Progreso: 1/5 | ✅ Éxitos: 0 | ❌ Fallos: 1
+[2025-10-16 20:09:09] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:09:12] 📊 Procesando 2/5: UNKNOWN_89560272
+[2025-10-16 20:09:14] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x651379d2b95a <unknown>
+#1 0x6513797cc536 <unknown>
+#2 0x651379806a93 <unknown>
+#3 0x651379802cdf <unknown>
+#4 0x651379851fa9 <unknown>
+#5 0x6513798516b6 <unknown>
+#6 0x6513798434f3 <unknown>
+#7 0x65137980f9c8 <unknown>
+#8 0x651379810661 <unknown>
+#9 0x651379cf08df <unknown>
+#10 0x651379cf4a28 <unknown>
+#11 0x651379cd799c <unknown>
+#12 0x651379cf51ee <unknown>
+#13 0x651379cbf52e <unknown>
+#14 0x651379d18be8 <unknown>
+#15 0x651379d18dff <unknown>
+#16 0x651379d2a44c <unknown>
+#17 0x7558db67eac3 <unknown>
+
+[2025-10-16 20:09:14] 📊 Progreso: 2/5 | ✅ Éxitos: 0 | ❌ Fallos: 2
+[2025-10-16 20:09:14] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:09:17] 📊 Procesando 3/5: UNKNOWN_89560272
+[2025-10-16 20:09:19] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x5a2b4510f95a <unknown>
+#1 0x5a2b44bb0536 <unknown>
+#2 0x5a2b44beaa93 <unknown>
+#3 0x5a2b44be6cdf <unknown>
+#4 0x5a2b44c35fa9 <unknown>
+#5 0x5a2b44c356b6 <unknown>
+#6 0x5a2b44c274f3 <unknown>
+#7 0x5a2b44bf39c8 <unknown>
+#8 0x5a2b44bf4661 <unknown>
+#9 0x5a2b450d48df <unknown>
+#10 0x5a2b450d8a28 <unknown>
+#11 0x5a2b450bb99c <unknown>
+#12 0x5a2b450d91ee <unknown>
+#13 0x5a2b450a352e <unknown>
+#14 0x5a2b450fcbe8 <unknown>
+#15 0x5a2b450fcdff <unknown>
+#16 0x5a2b4510e44c <unknown>
+#17 0x71a8add63ac3 <unknown>
+
+[2025-10-16 20:09:19] 📊 Progreso: 3/5 | ✅ Éxitos: 0 | ❌ Fallos: 3
+[2025-10-16 20:09:19] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:09:22] 📊 Procesando 4/5: UNKNOWN_89560268
+[2025-10-16 20:09:23] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x6281d6f8d95a <unknown>
+#1 0x6281d6a2e536 <unknown>
+#2 0x6281d6a68a93 <unknown>
+#3 0x6281d6a64cdf <unknown>
+#4 0x6281d6ab3fa9 <unknown>
+#5 0x6281d6ab36b6 <unknown>
+#6 0x6281d6aa54f3 <unknown>
+#7 0x6281d6a719c8 <unknown>
+#8 0x6281d6a72661 <unknown>
+#9 0x6281d6f528df <unknown>
+#10 0x6281d6f56a28 <unknown>
+#11 0x6281d6f3999c <unknown>
+#12 0x6281d6f571ee <unknown>
+#13 0x6281d6f2152e <unknown>
+#14 0x6281d6f7abe8 <unknown>
+#15 0x6281d6f7adff <unknown>
+#16 0x6281d6f8c44c <unknown>
+#17 0x768324464ac3 <unknown>
+
+[2025-10-16 20:09:23] 📊 Progreso: 4/5 | ✅ Éxitos: 0 | ❌ Fallos: 4
+[2025-10-16 20:09:23] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:09:26] 📊 Procesando 5/5: UNKNOWN_89560272
+[2025-10-16 20:09:28] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x568ab325095a <unknown>
+#1 0x568ab2cf1536 <unknown>
+#2 0x568ab2d2ba93 <unknown>
+#3 0x568ab2d27cdf <unknown>
+#4 0x568ab2d76fa9 <unknown>
+#5 0x568ab2d766b6 <unknown>
+#6 0x568ab2d684f3 <unknown>
+#7 0x568ab2d349c8 <unknown>
+#8 0x568ab2d35661 <unknown>
+#9 0x568ab32158df <unknown>
+#10 0x568ab3219a28 <unknown>
+#11 0x568ab31fc99c <unknown>
+#12 0x568ab321a1ee <unknown>
+#13 0x568ab31e452e <unknown>
+#14 0x568ab323dbe8 <unknown>
+#15 0x568ab323ddff <unknown>
+#16 0x568ab324f44c <unknown>
+#17 0x7b3a3fbfdac3 <unknown>
+
+[2025-10-16 20:09:28] 📊 Progreso: 5/5 | ✅ Éxitos: 0 | ❌ Fallos: 5
+[2025-10-16 20:09:28] ============================================================
+PROCESO COMPLETADO - ✅0 ❌5 en 19.7s
+============================================================
+[2025-10-16 20:12:27] Cargados 5 links para activación
+[2025-10-16 20:12:29] ============================================================
+INICIANDO PROCESO DE ACTIVACIÓN MASIVA (v4l2loopback)
+============================================================
+[2025-10-16 20:12:29] 🚀 INICIANDO PROCESO DE ACTIVACIÓN SECUENCIAL DE 5 TARJETAS (v4l2loopback)
+[2025-10-16 20:12:29] ✅ Dispositivo de cámara virtual /dev/video10 encontrado
+[2025-10-16 20:12:29] 📊 Procesando 1/5: UNKNOWN_89560272
+[2025-10-16 20:12:31] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x58aca57ff95a <unknown>
+#1 0x58aca52a0536 <unknown>
+#2 0x58aca52daa93 <unknown>
+#3 0x58aca52d6cdf <unknown>
+#4 0x58aca5325fa9 <unknown>
+#5 0x58aca53256b6 <unknown>
+#6 0x58aca53174f3 <unknown>
+#7 0x58aca52e39c8 <unknown>
+#8 0x58aca52e4661 <unknown>
+#9 0x58aca57c48df <unknown>
+#10 0x58aca57c8a28 <unknown>
+#11 0x58aca57ab99c <unknown>
+#12 0x58aca57c91ee <unknown>
+#13 0x58aca579352e <unknown>
+#14 0x58aca57ecbe8 <unknown>
+#15 0x58aca57ecdff <unknown>
+#16 0x58aca57fe44c <unknown>
+#17 0x7279210efac3 <unknown>
+
+[2025-10-16 20:12:31] 📊 Progreso: 1/5 | ✅ Éxitos: 0 | ❌ Fallos: 1
+[2025-10-16 20:12:31] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:12:34] 📊 Procesando 2/5: UNKNOWN_89560272
+[2025-10-16 20:12:35] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x5c8fb129395a <unknown>
+#1 0x5c8fb0d34536 <unknown>
+#2 0x5c8fb0d6ea93 <unknown>
+#3 0x5c8fb0d6acdf <unknown>
+#4 0x5c8fb0db9fa9 <unknown>
+#5 0x5c8fb0db96b6 <unknown>
+#6 0x5c8fb0dab4f3 <unknown>
+#7 0x5c8fb0d779c8 <unknown>
+#8 0x5c8fb0d78661 <unknown>
+#9 0x5c8fb12588df <unknown>
+#10 0x5c8fb125ca28 <unknown>
+#11 0x5c8fb123f99c <unknown>
+#12 0x5c8fb125d1ee <unknown>
+#13 0x5c8fb122752e <unknown>
+#14 0x5c8fb1280be8 <unknown>
+#15 0x5c8fb1280dff <unknown>
+#16 0x5c8fb129244c <unknown>
+#17 0x72878b6b4ac3 <unknown>
+
+[2025-10-16 20:12:35] 📊 Progreso: 2/5 | ✅ Éxitos: 0 | ❌ Fallos: 2
+[2025-10-16 20:12:35] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:12:38] 📊 Procesando 3/5: UNKNOWN_89560272
+[2025-10-16 20:12:40] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x5b1e8cec395a <unknown>
+#1 0x5b1e8c964536 <unknown>
+#2 0x5b1e8c99ea93 <unknown>
+#3 0x5b1e8c99acdf <unknown>
+#4 0x5b1e8c9e9fa9 <unknown>
+#5 0x5b1e8c9e96b6 <unknown>
+#6 0x5b1e8c9db4f3 <unknown>
+#7 0x5b1e8c9a79c8 <unknown>
+#8 0x5b1e8c9a8661 <unknown>
+#9 0x5b1e8ce888df <unknown>
+#10 0x5b1e8ce8ca28 <unknown>
+#11 0x5b1e8ce6f99c <unknown>
+#12 0x5b1e8ce8d1ee <unknown>
+#13 0x5b1e8ce5752e <unknown>
+#14 0x5b1e8ceb0be8 <unknown>
+#15 0x5b1e8ceb0dff <unknown>
+#16 0x5b1e8cec244c <unknown>
+#17 0x71e7bcb35ac3 <unknown>
+
+[2025-10-16 20:12:40] 📊 Progreso: 3/5 | ✅ Éxitos: 0 | ❌ Fallos: 3
+[2025-10-16 20:12:40] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:12:43] 📊 Procesando 4/5: UNKNOWN_89560268
+[2025-10-16 20:12:44] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x57579466095a <unknown>
+#1 0x575794101536 <unknown>
+#2 0x57579413ba93 <unknown>
+#3 0x575794137cdf <unknown>
+#4 0x575794186fa9 <unknown>
+#5 0x5757941866b6 <unknown>
+#6 0x5757941784f3 <unknown>
+#7 0x5757941449c8 <unknown>
+#8 0x575794145661 <unknown>
+#9 0x5757946258df <unknown>
+#10 0x575794629a28 <unknown>
+#11 0x57579460c99c <unknown>
+#12 0x57579462a1ee <unknown>
+#13 0x5757945f452e <unknown>
+#14 0x57579464dbe8 <unknown>
+#15 0x57579464ddff <unknown>
+#16 0x57579465f44c <unknown>
+#17 0x7c5cc3462ac3 <unknown>
+
+[2025-10-16 20:12:44] 📊 Progreso: 4/5 | ✅ Éxitos: 0 | ❌ Fallos: 4
+[2025-10-16 20:12:44] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:12:47] 📊 Procesando 5/5: UNKNOWN_89560272
+[2025-10-16 20:12:49] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x5723b5d5c95a <unknown>
+#1 0x5723b57fd536 <unknown>
+#2 0x5723b5837a93 <unknown>
+#3 0x5723b5833cdf <unknown>
+#4 0x5723b5882fa9 <unknown>
+#5 0x5723b58826b6 <unknown>
+#6 0x5723b58744f3 <unknown>
+#7 0x5723b58409c8 <unknown>
+#8 0x5723b5841661 <unknown>
+#9 0x5723b5d218df <unknown>
+#10 0x5723b5d25a28 <unknown>
+#11 0x5723b5d0899c <unknown>
+#12 0x5723b5d261ee <unknown>
+#13 0x5723b5cf052e <unknown>
+#14 0x5723b5d49be8 <unknown>
+#15 0x5723b5d49dff <unknown>
+#16 0x5723b5d5b44c <unknown>
+#17 0x778b84299ac3 <unknown>
+
+[2025-10-16 20:12:49] 📊 Progreso: 5/5 | ✅ Éxitos: 0 | ❌ Fallos: 5
+[2025-10-16 20:12:49] ============================================================
+PROCESO COMPLETADO - ✅0 ❌5 en 19.7s
+============================================================
+[2025-10-16 20:15:59] Cargados 5 links para activación
+[2025-10-16 20:16:02] ============================================================
+INICIANDO PROCESO DE ACTIVACIÓN MASIVA (v4l2loopback)
+============================================================
+[2025-10-16 20:16:02] 🚀 INICIANDO PROCESO DE ACTIVACIÓN SECUENCIAL DE 5 TARJETAS (v4l2loopback)
+[2025-10-16 20:16:02] ✅ Dispositivo de cámara virtual /dev/video10 encontrado
+[2025-10-16 20:16:02] 📊 Procesando 1/5: UNKNOWN_89560272
+[2025-10-16 20:16:02] ❌ Error al crear driver Chrome: cannot access local variable 'os' where it is not associated with a value
+[2025-10-16 20:16:02] 📊 Progreso: 1/5 | ✅ Éxitos: 0 | ❌ Fallos: 1
+[2025-10-16 20:16:02] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:16:05] 📊 Procesando 2/5: UNKNOWN_89560272
+[2025-10-16 20:16:05] ❌ Error al crear driver Chrome: cannot access local variable 'os' where it is not associated with a value
+[2025-10-16 20:16:05] 📊 Progreso: 2/5 | ✅ Éxitos: 0 | ❌ Fallos: 2
+[2025-10-16 20:16:05] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:16:08] 📊 Procesando 3/5: UNKNOWN_89560272
+[2025-10-16 20:16:08] ❌ Error al crear driver Chrome: cannot access local variable 'os' where it is not associated with a value
+[2025-10-16 20:16:08] 📊 Progreso: 3/5 | ✅ Éxitos: 0 | ❌ Fallos: 3
+[2025-10-16 20:16:08] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:16:11] 📊 Procesando 4/5: UNKNOWN_89560268
+[2025-10-16 20:16:11] ❌ Error al crear driver Chrome: cannot access local variable 'os' where it is not associated with a value
+[2025-10-16 20:16:11] 📊 Progreso: 4/5 | ✅ Éxitos: 0 | ❌ Fallos: 4
+[2025-10-16 20:16:11] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:16:14] 📊 Procesando 5/5: UNKNOWN_89560272
+[2025-10-16 20:16:14] ❌ Error al crear driver Chrome: cannot access local variable 'os' where it is not associated with a value
+[2025-10-16 20:16:14] 📊 Progreso: 5/5 | ✅ Éxitos: 0 | ❌ Fallos: 5
+[2025-10-16 20:16:14] ============================================================
+PROCESO COMPLETADO - ✅0 ❌5 en 12.0s
+============================================================
+[2025-10-16 20:19:38] Cargados 5 links para activación
+[2025-10-16 20:19:40] ============================================================
+INICIANDO PROCESO DE ACTIVACIÓN MASIVA (v4l2loopback)
+============================================================
+[2025-10-16 20:19:40] 🚀 INICIANDO PROCESO DE ACTIVACIÓN SECUENCIAL DE 5 TARJETAS (v4l2loopback)
+[2025-10-16 20:19:40] ✅ Dispositivo de cámara virtual /dev/video10 encontrado
+[2025-10-16 20:19:40] 📊 Procesando 1/5: UNKNOWN_89560272
+[2025-10-16 20:19:41] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x5c3bab51c95a <unknown>
+#1 0x5c3baafbd536 <unknown>
+#2 0x5c3baaff7a93 <unknown>
+#3 0x5c3baaff3cdf <unknown>
+#4 0x5c3bab042fa9 <unknown>
+#5 0x5c3bab0426b6 <unknown>
+#6 0x5c3bab0344f3 <unknown>
+#7 0x5c3bab0009c8 <unknown>
+#8 0x5c3bab001661 <unknown>
+#9 0x5c3bab4e18df <unknown>
+#10 0x5c3bab4e5a28 <unknown>
+#11 0x5c3bab4c899c <unknown>
+#12 0x5c3bab4e61ee <unknown>
+#13 0x5c3bab4b052e <unknown>
+#14 0x5c3bab509be8 <unknown>
+#15 0x5c3bab509dff <unknown>
+#16 0x5c3bab51b44c <unknown>
+#17 0x7a7b2d414ac3 <unknown>
+
+[2025-10-16 20:19:41] 📊 Progreso: 1/5 | ✅ Éxitos: 0 | ❌ Fallos: 1
+[2025-10-16 20:19:41] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:19:44] 📊 Procesando 2/5: UNKNOWN_89560272
+[2025-10-16 20:19:45] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x5bda6912b95a <unknown>
+#1 0x5bda68bcc536 <unknown>
+#2 0x5bda68c06a93 <unknown>
+#3 0x5bda68c02cdf <unknown>
+#4 0x5bda68c51fa9 <unknown>
+#5 0x5bda68c516b6 <unknown>
+#6 0x5bda68c434f3 <unknown>
+#7 0x5bda68c0f9c8 <unknown>
+#8 0x5bda68c10661 <unknown>
+#9 0x5bda690f08df <unknown>
+#10 0x5bda690f4a28 <unknown>
+#11 0x5bda690d799c <unknown>
+#12 0x5bda690f51ee <unknown>
+#13 0x5bda690bf52e <unknown>
+#14 0x5bda69118be8 <unknown>
+#15 0x5bda69118dff <unknown>
+#16 0x5bda6912a44c <unknown>
+#17 0x71ad181aaac3 <unknown>
+
+[2025-10-16 20:19:45] 📊 Progreso: 2/5 | ✅ Éxitos: 0 | ❌ Fallos: 2
+[2025-10-16 20:19:45] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:19:48] 📊 Procesando 3/5: UNKNOWN_89560272
+[2025-10-16 20:19:50] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x612de42df95a <unknown>
+#1 0x612de3d80536 <unknown>
+#2 0x612de3dbaa93 <unknown>
+#3 0x612de3db6cdf <unknown>
+#4 0x612de3e05fa9 <unknown>
+#5 0x612de3e056b6 <unknown>
+#6 0x612de3df74f3 <unknown>
+#7 0x612de3dc39c8 <unknown>
+#8 0x612de3dc4661 <unknown>
+#9 0x612de42a48df <unknown>
+#10 0x612de42a8a28 <unknown>
+#11 0x612de428b99c <unknown>
+#12 0x612de42a91ee <unknown>
+#13 0x612de427352e <unknown>
+#14 0x612de42ccbe8 <unknown>
+#15 0x612de42ccdff <unknown>
+#16 0x612de42de44c <unknown>
+#17 0x726b35de1ac3 <unknown>
+
+[2025-10-16 20:19:50] 📊 Progreso: 3/5 | ✅ Éxitos: 0 | ❌ Fallos: 3
+[2025-10-16 20:19:50] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:19:53] 📊 Procesando 4/5: UNKNOWN_89560268
+[2025-10-16 20:19:54] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x59b76f2c495a <unknown>
+#1 0x59b76ed65536 <unknown>
+#2 0x59b76ed9fa93 <unknown>
+#3 0x59b76ed9bcdf <unknown>
+#4 0x59b76edeafa9 <unknown>
+#5 0x59b76edea6b6 <unknown>
+#6 0x59b76eddc4f3 <unknown>
+#7 0x59b76eda89c8 <unknown>
+#8 0x59b76eda9661 <unknown>
+#9 0x59b76f2898df <unknown>
+#10 0x59b76f28da28 <unknown>
+#11 0x59b76f27099c <unknown>
+#12 0x59b76f28e1ee <unknown>
+#13 0x59b76f25852e <unknown>
+#14 0x59b76f2b1be8 <unknown>
+#15 0x59b76f2b1dff <unknown>
+#16 0x59b76f2c344c <unknown>
+#17 0x7688b4526ac3 <unknown>
+
+[2025-10-16 20:19:54] 📊 Progreso: 4/5 | ✅ Éxitos: 0 | ❌ Fallos: 4
+[2025-10-16 20:19:54] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:19:57] 📊 Procesando 5/5: UNKNOWN_89560272
+[2025-10-16 20:19:58] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x5c7cb47b995a <unknown>
+#1 0x5c7cb425a536 <unknown>
+#2 0x5c7cb4294a93 <unknown>
+#3 0x5c7cb4290cdf <unknown>
+#4 0x5c7cb42dffa9 <unknown>
+#5 0x5c7cb42df6b6 <unknown>
+#6 0x5c7cb42d14f3 <unknown>
+#7 0x5c7cb429d9c8 <unknown>
+#8 0x5c7cb429e661 <unknown>
+#9 0x5c7cb477e8df <unknown>
+#10 0x5c7cb4782a28 <unknown>
+#11 0x5c7cb476599c <unknown>
+#12 0x5c7cb47831ee <unknown>
+#13 0x5c7cb474d52e <unknown>
+#14 0x5c7cb47a6be8 <unknown>
+#15 0x5c7cb47a6dff <unknown>
+#16 0x5c7cb47b844c <unknown>
+#17 0x77e36879cac3 <unknown>
+
+[2025-10-16 20:19:58] 📊 Progreso: 5/5 | ✅ Éxitos: 0 | ❌ Fallos: 5
+[2025-10-16 20:19:58] ============================================================
+PROCESO COMPLETADO - ✅0 ❌5 en 18.5s
+============================================================
+[2025-10-16 20:22:31] Cargados 5 links para activación
+[2025-10-16 20:22:32] ============================================================
+INICIANDO PROCESO DE ACTIVACIÓN MASIVA (v4l2loopback)
+============================================================
+[2025-10-16 20:22:32] 🚀 INICIANDO PROCESO DE ACTIVACIÓN SECUENCIAL DE 5 TARJETAS (v4l2loopback)
+[2025-10-16 20:22:32] ✅ Dispositivo de cámara virtual /dev/video10 encontrado
+[2025-10-16 20:22:32] 📊 Procesando 1/5: UNKNOWN_89560272
+[2025-10-16 20:22:34] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x64ee9859595a <unknown>
+#1 0x64ee98036536 <unknown>
+#2 0x64ee98070a93 <unknown>
+#3 0x64ee9806ccdf <unknown>
+#4 0x64ee980bbfa9 <unknown>
+#5 0x64ee980bb6b6 <unknown>
+#6 0x64ee980ad4f3 <unknown>
+#7 0x64ee980799c8 <unknown>
+#8 0x64ee9807a661 <unknown>
+#9 0x64ee9855a8df <unknown>
+#10 0x64ee9855ea28 <unknown>
+#11 0x64ee9854199c <unknown>
+#12 0x64ee9855f1ee <unknown>
+#13 0x64ee9852952e <unknown>
+#14 0x64ee98582be8 <unknown>
+#15 0x64ee98582dff <unknown>
+#16 0x64ee9859444c <unknown>
+#17 0x721780934ac3 <unknown>
+
+[2025-10-16 20:22:34] 📊 Progreso: 1/5 | ✅ Éxitos: 0 | ❌ Fallos: 1
+[2025-10-16 20:22:34] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:22:37] 📊 Procesando 2/5: UNKNOWN_89560272
+[2025-10-16 20:22:39] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x5e618e23a95a <unknown>
+#1 0x5e618dcdb536 <unknown>
+#2 0x5e618dd15a93 <unknown>
+#3 0x5e618dd11cdf <unknown>
+#4 0x5e618dd60fa9 <unknown>
+#5 0x5e618dd606b6 <unknown>
+#6 0x5e618dd524f3 <unknown>
+#7 0x5e618dd1e9c8 <unknown>
+#8 0x5e618dd1f661 <unknown>
+#9 0x5e618e1ff8df <unknown>
+#10 0x5e618e203a28 <unknown>
+#11 0x5e618e1e699c <unknown>
+#12 0x5e618e2041ee <unknown>
+#13 0x5e618e1ce52e <unknown>
+#14 0x5e618e227be8 <unknown>
+#15 0x5e618e227dff <unknown>
+#16 0x5e618e23944c <unknown>
+#17 0x753efefabac3 <unknown>
+
+[2025-10-16 20:22:39] 📊 Progreso: 2/5 | ✅ Éxitos: 0 | ❌ Fallos: 2
+[2025-10-16 20:22:39] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:22:42] 📊 Procesando 3/5: UNKNOWN_89560272
+[2025-10-16 20:22:44] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x562a570d695a <unknown>
+#1 0x562a56b77536 <unknown>
+#2 0x562a56bb1a93 <unknown>
+#3 0x562a56badcdf <unknown>
+#4 0x562a56bfcfa9 <unknown>
+#5 0x562a56bfc6b6 <unknown>
+#6 0x562a56bee4f3 <unknown>
+#7 0x562a56bba9c8 <unknown>
+#8 0x562a56bbb661 <unknown>
+#9 0x562a5709b8df <unknown>
+#10 0x562a5709fa28 <unknown>
+#11 0x562a5708299c <unknown>
+#12 0x562a570a01ee <unknown>
+#13 0x562a5706a52e <unknown>
+#14 0x562a570c3be8 <unknown>
+#15 0x562a570c3dff <unknown>
+#16 0x562a570d544c <unknown>
+#17 0x761f8e8e8ac3 <unknown>
+
+[2025-10-16 20:22:44] 📊 Progreso: 3/5 | ✅ Éxitos: 0 | ❌ Fallos: 3
+[2025-10-16 20:22:44] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:22:47] 📊 Procesando 4/5: UNKNOWN_89560268
+[2025-10-16 20:22:49] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x5b7c69b4c95a <unknown>
+#1 0x5b7c695ed536 <unknown>
+#2 0x5b7c69627a93 <unknown>
+#3 0x5b7c69623cdf <unknown>
+#4 0x5b7c69672fa9 <unknown>
+#5 0x5b7c696726b6 <unknown>
+#6 0x5b7c696644f3 <unknown>
+#7 0x5b7c696309c8 <unknown>
+#8 0x5b7c69631661 <unknown>
+#9 0x5b7c69b118df <unknown>
+#10 0x5b7c69b15a28 <unknown>
+#11 0x5b7c69af899c <unknown>
+#12 0x5b7c69b161ee <unknown>
+#13 0x5b7c69ae052e <unknown>
+#14 0x5b7c69b39be8 <unknown>
+#15 0x5b7c69b39dff <unknown>
+#16 0x5b7c69b4b44c <unknown>
+#17 0x7576d8c1fac3 <unknown>
+
+[2025-10-16 20:22:49] 📊 Progreso: 4/5 | ✅ Éxitos: 0 | ❌ Fallos: 4
+[2025-10-16 20:22:49] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:22:52] 📊 Procesando 5/5: UNKNOWN_89560272
+[2025-10-16 20:22:54] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x58b0235c695a <unknown>
+#1 0x58b023067536 <unknown>
+#2 0x58b0230a1a93 <unknown>
+#3 0x58b02309dcdf <unknown>
+#4 0x58b0230ecfa9 <unknown>
+#5 0x58b0230ec6b6 <unknown>
+#6 0x58b0230de4f3 <unknown>
+#7 0x58b0230aa9c8 <unknown>
+#8 0x58b0230ab661 <unknown>
+#9 0x58b02358b8df <unknown>
+#10 0x58b02358fa28 <unknown>
+#11 0x58b02357299c <unknown>
+#12 0x58b0235901ee <unknown>
+#13 0x58b02355a52e <unknown>
+#14 0x58b0235b3be8 <unknown>
+#15 0x58b0235b3dff <unknown>
+#16 0x58b0235c544c <unknown>
+#17 0x74fd30543ac3 <unknown>
+
+[2025-10-16 20:22:54] 📊 Progreso: 5/5 | ✅ Éxitos: 0 | ❌ Fallos: 5
+[2025-10-16 20:22:54] ============================================================
+PROCESO COMPLETADO - ✅0 ❌5 en 22.0s
+============================================================
+[2025-10-16 20:28:06] Cargados 5 links para activación
+[2025-10-16 20:28:08] ============================================================
+INICIANDO PROCESO DE ACTIVACIÓN MASIVA (v4l2loopback)
+============================================================
+[2025-10-16 20:28:08] 🚀 INICIANDO PROCESO DE ACTIVACIÓN SECUENCIAL DE 5 TARJETAS (v4l2loopback)
+[2025-10-16 20:28:08] ✅ Dispositivo de cámara virtual /dev/video10 encontrado
+[2025-10-16 20:28:08] 📊 Procesando 1/5: UNKNOWN_89560272
+[2025-10-16 20:28:10] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x59149181e95a <unknown>
+#1 0x5914912bf536 <unknown>
+#2 0x5914912f9a93 <unknown>
+#3 0x5914912f5cdf <unknown>
+#4 0x591491344fa9 <unknown>
+#5 0x5914913446b6 <unknown>
+#6 0x5914913364f3 <unknown>
+#7 0x5914913029c8 <unknown>
+#8 0x591491303661 <unknown>
+#9 0x5914917e38df <unknown>
+#10 0x5914917e7a28 <unknown>
+#11 0x5914917ca99c <unknown>
+#12 0x5914917e81ee <unknown>
+#13 0x5914917b252e <unknown>
+#14 0x59149180bbe8 <unknown>
+#15 0x59149180bdff <unknown>
+#16 0x59149181d44c <unknown>
+#17 0x75f724f90ac3 <unknown>
+
+[2025-10-16 20:28:10] 📊 Progreso: 1/5 | ✅ Éxitos: 0 | ❌ Fallos: 1
+[2025-10-16 20:28:10] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:28:13] 📊 Procesando 2/5: UNKNOWN_89560272
+[2025-10-16 20:28:15] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x5f28aab8595a <unknown>
+#1 0x5f28aa626536 <unknown>
+#2 0x5f28aa660a93 <unknown>
+#3 0x5f28aa65ccdf <unknown>
+#4 0x5f28aa6abfa9 <unknown>
+#5 0x5f28aa6ab6b6 <unknown>
+#6 0x5f28aa69d4f3 <unknown>
+#7 0x5f28aa6699c8 <unknown>
+#8 0x5f28aa66a661 <unknown>
+#9 0x5f28aab4a8df <unknown>
+#10 0x5f28aab4ea28 <unknown>
+#11 0x5f28aab3199c <unknown>
+#12 0x5f28aab4f1ee <unknown>
+#13 0x5f28aab1952e <unknown>
+#14 0x5f28aab72be8 <unknown>
+#15 0x5f28aab72dff <unknown>
+#16 0x5f28aab8444c <unknown>
+#17 0x70e29cf59ac3 <unknown>
+
+[2025-10-16 20:28:15] 📊 Progreso: 2/5 | ✅ Éxitos: 0 | ❌ Fallos: 2
+[2025-10-16 20:28:15] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:28:18] 📊 Procesando 3/5: UNKNOWN_89560272
+[2025-10-16 20:28:21] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x6343b5b5f95a <unknown>
+#1 0x6343b5600536 <unknown>
+#2 0x6343b563aa93 <unknown>
+#3 0x6343b5636cdf <unknown>
+#4 0x6343b5685fa9 <unknown>
+#5 0x6343b56856b6 <unknown>
+#6 0x6343b56774f3 <unknown>
+#7 0x6343b56439c8 <unknown>
+#8 0x6343b5644661 <unknown>
+#9 0x6343b5b248df <unknown>
+#10 0x6343b5b28a28 <unknown>
+#11 0x6343b5b0b99c <unknown>
+#12 0x6343b5b291ee <unknown>
+#13 0x6343b5af352e <unknown>
+#14 0x6343b5b4cbe8 <unknown>
+#15 0x6343b5b4cdff <unknown>
+#16 0x6343b5b5e44c <unknown>
+#17 0x73c209ad2ac3 <unknown>
+
+[2025-10-16 20:28:21] 📊 Progreso: 3/5 | ✅ Éxitos: 0 | ❌ Fallos: 3
+[2025-10-16 20:28:21] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:28:24] 📊 Procesando 4/5: UNKNOWN_89560268
+[2025-10-16 20:28:26] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x63461a2af95a <unknown>
+#1 0x634619d50536 <unknown>
+#2 0x634619d8aa93 <unknown>
+#3 0x634619d86cdf <unknown>
+#4 0x634619dd5fa9 <unknown>
+#5 0x634619dd56b6 <unknown>
+#6 0x634619dc74f3 <unknown>
+#7 0x634619d939c8 <unknown>
+#8 0x634619d94661 <unknown>
+#9 0x63461a2748df <unknown>
+#10 0x63461a278a28 <unknown>
+#11 0x63461a25b99c <unknown>
+#12 0x63461a2791ee <unknown>
+#13 0x63461a24352e <unknown>
+#14 0x63461a29cbe8 <unknown>
+#15 0x63461a29cdff <unknown>
+#16 0x63461a2ae44c <unknown>
+#17 0x7ea2df8d9ac3 <unknown>
+
+[2025-10-16 20:28:26] 📊 Progreso: 4/5 | ✅ Éxitos: 0 | ❌ Fallos: 4
+[2025-10-16 20:28:26] ⏳ Pausa de 3 segundos...
+[2025-10-16 20:28:29] 📊 Procesando 5/5: UNKNOWN_89560272
+[2025-10-16 20:28:31] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x640c75bd995a <unknown>
+#1 0x640c7567a536 <unknown>
+#2 0x640c756b4a93 <unknown>
+#3 0x640c756b0cdf <unknown>
+#4 0x640c756fffa9 <unknown>
+#5 0x640c756ff6b6 <unknown>
+#6 0x640c756f14f3 <unknown>
+#7 0x640c756bd9c8 <unknown>
+#8 0x640c756be661 <unknown>
+#9 0x640c75b9e8df <unknown>
+#10 0x640c75ba2a28 <unknown>
+#11 0x640c75b8599c <unknown>
+#12 0x640c75ba31ee <unknown>
+#13 0x640c75b6d52e <unknown>
+#14 0x640c75bc6be8 <unknown>
+#15 0x640c75bc6dff <unknown>
+#16 0x640c75bd844c <unknown>
+#17 0x780e78b8cac3 <unknown>
+
+[2025-10-16 20:28:31] 📊 Progreso: 5/5 | ✅ Éxitos: 0 | ❌ Fallos: 5
+[2025-10-16 20:28:31] ============================================================
+PROCESO COMPLETADO - ✅0 ❌5 en 22.8s
+============================================================
+[2025-10-16 21:14:00] Cargados 5 links para activación
+[2025-10-16 21:14:05] ============================================================
+INICIANDO PROCESO DE ACTIVACIÓN MASIVA (v4l2loopback)
+============================================================
+[2025-10-16 21:14:05] 🚀 INICIANDO PROCESO DE ACTIVACIÓN SECUENCIAL DE 5 TARJETAS (v4l2loopback)
+[2025-10-16 21:14:05] ✅ Dispositivo de cámara virtual /dev/video10 encontrado
+[2025-10-16 21:14:05] 📊 Procesando 1/5: UNKNOWN_89560272
+[2025-10-16 21:14:07] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x57fbc80c195a <unknown>
+#1 0x57fbc7b62536 <unknown>
+#2 0x57fbc7b9ca93 <unknown>
+#3 0x57fbc7b98cdf <unknown>
+#4 0x57fbc7be7fa9 <unknown>
+#5 0x57fbc7be76b6 <unknown>
+#6 0x57fbc7bd94f3 <unknown>
+#7 0x57fbc7ba59c8 <unknown>
+#8 0x57fbc7ba6661 <unknown>
+#9 0x57fbc80868df <unknown>
+#10 0x57fbc808aa28 <unknown>
+#11 0x57fbc806d99c <unknown>
+#12 0x57fbc808b1ee <unknown>
+#13 0x57fbc805552e <unknown>
+#14 0x57fbc80aebe8 <unknown>
+#15 0x57fbc80aedff <unknown>
+#16 0x57fbc80c044c <unknown>
+#17 0x73d548131ac3 <unknown>
+
+[2025-10-16 21:14:07] 📊 Progreso: 1/5 | ✅ Éxitos: 0 | ❌ Fallos: 1
+[2025-10-16 21:14:07] ⏳ Pausa de 3 segundos...
+[2025-10-16 21:14:10] 📊 Procesando 2/5: UNKNOWN_89560272
+[2025-10-16 21:14:12] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x585fee7fb95a <unknown>
+#1 0x585fee29c536 <unknown>
+#2 0x585fee2d6a93 <unknown>
+#3 0x585fee2d2cdf <unknown>
+#4 0x585fee321fa9 <unknown>
+#5 0x585fee3216b6 <unknown>
+#6 0x585fee3134f3 <unknown>
+#7 0x585fee2df9c8 <unknown>
+#8 0x585fee2e0661 <unknown>
+#9 0x585fee7c08df <unknown>
+#10 0x585fee7c4a28 <unknown>
+#11 0x585fee7a799c <unknown>
+#12 0x585fee7c51ee <unknown>
+#13 0x585fee78f52e <unknown>
+#14 0x585fee7e8be8 <unknown>
+#15 0x585fee7e8dff <unknown>
+#16 0x585fee7fa44c <unknown>
+#17 0x7858dfdd5ac3 <unknown>
+
+[2025-10-16 21:14:12] 📊 Progreso: 2/5 | ✅ Éxitos: 0 | ❌ Fallos: 2
+[2025-10-16 21:14:12] ⏳ Pausa de 3 segundos...
+[2025-10-16 21:14:15] 📊 Procesando 3/5: UNKNOWN_89560272
+[2025-10-16 21:14:18] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x560d6fa9b95a <unknown>
+#1 0x560d6f53c536 <unknown>
+#2 0x560d6f576a93 <unknown>
+#3 0x560d6f572cdf <unknown>
+#4 0x560d6f5c1fa9 <unknown>
+#5 0x560d6f5c16b6 <unknown>
+#6 0x560d6f5b34f3 <unknown>
+#7 0x560d6f57f9c8 <unknown>
+#8 0x560d6f580661 <unknown>
+#9 0x560d6fa608df <unknown>
+#10 0x560d6fa64a28 <unknown>
+#11 0x560d6fa4799c <unknown>
+#12 0x560d6fa651ee <unknown>
+#13 0x560d6fa2f52e <unknown>
+#14 0x560d6fa88be8 <unknown>
+#15 0x560d6fa88dff <unknown>
+#16 0x560d6fa9a44c <unknown>
+#17 0x77ee8e6fbac3 <unknown>
+
+[2025-10-16 21:14:18] 📊 Progreso: 3/5 | ✅ Éxitos: 0 | ❌ Fallos: 3
+[2025-10-16 21:14:18] ⏳ Pausa de 3 segundos...
+[2025-10-16 21:14:21] 📊 Procesando 4/5: UNKNOWN_89560268
+[2025-10-16 21:14:23] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x60d38322995a <unknown>
+#1 0x60d382cca536 <unknown>
+#2 0x60d382d04a93 <unknown>
+#3 0x60d382d00cdf <unknown>
+#4 0x60d382d4ffa9 <unknown>
+#5 0x60d382d4f6b6 <unknown>
+#6 0x60d382d414f3 <unknown>
+#7 0x60d382d0d9c8 <unknown>
+#8 0x60d382d0e661 <unknown>
+#9 0x60d3831ee8df <unknown>
+#10 0x60d3831f2a28 <unknown>
+#11 0x60d3831d599c <unknown>
+#12 0x60d3831f31ee <unknown>
+#13 0x60d3831bd52e <unknown>
+#14 0x60d383216be8 <unknown>
+#15 0x60d383216dff <unknown>
+#16 0x60d38322844c <unknown>
+#17 0x75663e3cdac3 <unknown>
+
+[2025-10-16 21:14:23] 📊 Progreso: 4/5 | ✅ Éxitos: 0 | ❌ Fallos: 4
+[2025-10-16 21:14:23] ⏳ Pausa de 3 segundos...
+[2025-10-16 21:14:26] 📊 Procesando 5/5: UNKNOWN_89560272
+[2025-10-16 21:14:28] ❌ Error al crear driver Chrome: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x58ec8949995a <unknown>
+#1 0x58ec88f3a536 <unknown>
+#2 0x58ec88f74a93 <unknown>
+#3 0x58ec88f70cdf <unknown>
+#4 0x58ec88fbffa9 <unknown>
+#5 0x58ec88fbf6b6 <unknown>
+#6 0x58ec88fb14f3 <unknown>
+#7 0x58ec88f7d9c8 <unknown>
+#8 0x58ec88f7e661 <unknown>
+#9 0x58ec8945e8df <unknown>
+#10 0x58ec89462a28 <unknown>
+#11 0x58ec8944599c <unknown>
+#12 0x58ec894631ee <unknown>
+#13 0x58ec8942d52e <unknown>
+#14 0x58ec89486be8 <unknown>
+#15 0x58ec89486dff <unknown>
+#16 0x58ec8949844c <unknown>
+#17 0x7d5ef7783ac3 <unknown>
+
+[2025-10-16 21:14:28] 📊 Progreso: 5/5 | ✅ Éxitos: 0 | ❌ Fallos: 5
+[2025-10-16 21:14:28] ============================================================
+PROCESO COMPLETADO - ✅0 ❌5 en 23.3s
+============================================================
