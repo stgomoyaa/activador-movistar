@@ -252,8 +252,8 @@ def cargar_links_pendientes():
 
 def crear_driver_chrome(user_data_dir=None):
     """Crea una instancia de Chrome WebDriver con emulación móvil."""
+    temp_user_data_dir = None
     try:
-        import uuid
         import random
 
         mobile_emulation = {"deviceName": "iPhone XR"}
@@ -261,12 +261,18 @@ def crear_driver_chrome(user_data_dir=None):
         chrome_options = Options()
         chrome_options.binary_location = "/usr/bin/chromium-browser"
 
-        # NO USAR user-data-dir - dejar que Chrome lo maneje automáticamente
         # Usar puerto de debugging único para cada instancia
         debug_port = random.randint(9223, 9999)
         chrome_options.add_argument(f"--remote-debugging-port={debug_port}")
 
-        user_data_dir = "/tmp/chrome_session"  # Valor dummy para retornar
+        # Crear un perfil temporal dedicado por instancia para evitar bloqueos
+        if user_data_dir is None:
+            temp_user_data_dir = tempfile.mkdtemp(prefix="chrome-profile-")
+            user_data_dir = temp_user_data_dir
+        else:
+            os.makedirs(user_data_dir, exist_ok=True)
+        chrome_options.add_argument(f"--user-data-dir={user_data_dir}")
+
         print(f"🔧 Debug port: {debug_port}")
 
         # Añadir opciones base
@@ -319,6 +325,11 @@ def crear_driver_chrome(user_data_dir=None):
 
     except Exception as e:
         escribir_log(f"❌ Error al crear driver Chrome: {e}")
+
+        # Limpiar el directorio temporal si la inicialización falla
+        if temp_user_data_dir and os.path.exists(temp_user_data_dir):
+            shutil.rmtree(temp_user_data_dir, ignore_errors=True)
+
         return None, None
 
 
