@@ -182,6 +182,27 @@ class Config:
         "/usr/bin/chromedriver",
     ]
 
+    # Configuración del entorno gráfico para servidores sin interfaz
+    XVFB_DISPLAY = os.environ.get("ACTIVADOR_XVFB_DISPLAY", ":99")
+    XVFB_SCREEN = os.environ.get("ACTIVADOR_XVFB_SCREEN", "1280x720x24")
+    XVFB_EXTRA_ARGS = os.environ.get("ACTIVADOR_XVFB_EXTRA", "-ac").split()
+
+    # Posibles ubicaciones del binario de Chromium/Chrome
+    CHROME_BIN_CANDIDATES = [
+        os.environ.get("CHROME_BINARY"),
+        "/usr/bin/chromium-browser",
+        "/usr/bin/chromium",
+        "/snap/bin/chromium",
+        "/usr/bin/google-chrome",
+        "/usr/bin/google-chrome-stable",
+    ]
+
+    # Posibles ubicaciones para chromedriver
+    CHROMEDRIVER_CANDIDATES = [
+        os.environ.get("CHROMEDRIVER_PATH"),
+        "/usr/bin/chromedriver",
+    ]
+
     # Tiempos
     TIMEOUT_PAGINA = 60
     PAUSA_ENTRE_ACTIVACIONES = 3
@@ -583,6 +604,7 @@ def crear_driver_chrome():
     """Crea una instancia de Chrome WebDriver con emulación móvil."""
 
     chromedriver_log = None
+    user_data_dir = None
 
     try:
         asegurar_xdg_runtime_dir()
@@ -628,6 +650,9 @@ def crear_driver_chrome():
         chrome_options.add_argument("--use-mock-keychain")
         chrome_options.add_argument("--incognito")
 
+        user_data_dir = tempfile.mkdtemp(prefix="activador_movistar_profile_")
+        chrome_options.add_argument(f"--user-data-dir={user_data_dir}")
+
         print(f"🔧 Debug port: {debug_port}")
         escribir_log(f"🔧 Debug port asignado: {debug_port}")
 
@@ -658,6 +683,7 @@ def crear_driver_chrome():
 
         driver = webdriver.Chrome(service=service, options=chrome_options)
         setattr(driver, "_activador_chromedriver_log", str(chromedriver_log))
+        setattr(driver, "_activador_user_data_dir", user_data_dir)
 
         driver.execute_script(
             "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
@@ -674,6 +700,10 @@ def crear_driver_chrome():
         if chromedriver_log and os.path.exists(chromedriver_log):
             with contextlib.suppress(OSError):
                 os.remove(chromedriver_log)
+
+        if user_data_dir and os.path.exists(user_data_dir):
+            with contextlib.suppress(Exception):
+                shutil.rmtree(user_data_dir)
 
         return None
 
@@ -1262,6 +1292,12 @@ def activar_tarjeta_completa(numero_telefono, iccid, link, cam_controller):
                     log_path = getattr(driver, "_activador_chromedriver_log", None)
                     if log_path and os.path.exists(log_path):
                         os.remove(log_path)
+                except Exception:
+                    pass
+                try:
+                    user_data_dir = getattr(driver, "_activador_user_data_dir", None)
+                    if user_data_dir and os.path.exists(user_data_dir):
+                        shutil.rmtree(user_data_dir)
                 except Exception:
                     pass
         cerrar_procesos_chrome_residuales()
