@@ -4,9 +4,12 @@ Activador Masivo Movistar - Versión v4l2loopback (SIN OBS)
 Adaptado para usar cámara virtual de Linux en lugar de OBS Studio
 """
 
-VERSION = "1.2"
+VERSION = "1.3"
 
 import atexit
+import contextlib
+import signal
+import socket
 import tempfile
 import time
 import threading
@@ -51,6 +54,27 @@ class Config:
         "--use-fake-ui-for-media-stream",
         "--use-fake-device-for-media-stream",
         "--log-level=3",
+    ]
+
+    # Configuración del entorno gráfico para servidores sin interfaz
+    XVFB_DISPLAY = os.environ.get("ACTIVADOR_XVFB_DISPLAY", ":99")
+    XVFB_SCREEN = os.environ.get("ACTIVADOR_XVFB_SCREEN", "1280x720x24")
+    XVFB_EXTRA_ARGS = os.environ.get("ACTIVADOR_XVFB_EXTRA", "-ac").split()
+
+    # Posibles ubicaciones del binario de Chromium/Chrome
+    CHROME_BIN_CANDIDATES = [
+        os.environ.get("CHROME_BINARY"),
+        "/usr/bin/chromium-browser",
+        "/usr/bin/chromium",
+        "/snap/bin/chromium",
+        "/usr/bin/google-chrome",
+        "/usr/bin/google-chrome-stable",
+    ]
+
+    # Posibles ubicaciones para chromedriver
+    CHROMEDRIVER_CANDIDATES = [
+        os.environ.get("CHROMEDRIVER_PATH"),
+        "/usr/bin/chromedriver",
     ]
 
     # Configuración del entorno gráfico para servidores sin interfaz
@@ -148,6 +172,24 @@ log_lock = threading.Lock()
 xvfb_proceso = None
 
 
+def asegurar_xdg_runtime_dir():
+    """Garantiza que XDG_RUNTIME_DIR exista y tenga permisos seguros."""
+
+    runtime_dir = os.environ.get("XDG_RUNTIME_DIR")
+    if runtime_dir and os.path.isdir(runtime_dir):
+        try:
+            os.chmod(runtime_dir, 0o700)
+        except PermissionError:
+            pass
+        return runtime_dir
+
+    runtime_dir = f"/tmp/xdg-runtime-{os.getuid()}"
+    os.makedirs(runtime_dir, exist_ok=True)
+    os.chmod(runtime_dir, 0o700)
+    os.environ["XDG_RUNTIME_DIR"] = runtime_dir
+    return runtime_dir
+
+
 def _eliminar_archivos_singleton(directorio):
     """Elimina archivos que bloquean el perfil (Singleton*, DevToolsActivePort)."""
 
@@ -167,6 +209,106 @@ def _eliminar_archivos_singleton(directorio):
         return eliminados
     except Exception:
         return 0
+
+
+def _resolver_base_perfiles_temporales(chrome_binario):
+    """Determina dónde crear los perfiles temporales según el origen del binario."""
+
+    real_path = Path(chrome_binario).resolve() if chrome_binario else None
+
+    if real_path and any(part == "snap" for part in real_path.parts):
+        base = Path.home() / "snap" / "chromium" / "common" / "activador_movistar_profiles"
+    else:
+        base = Path(tempfile.gettempdir()) / "activador_movistar_profiles"
+
+    base.mkdir(parents=True, exist_ok=True)
+    os.chmod(base, 0o700)
+    return base
+
+
+def _crear_perfil_temporal(chrome_binario):
+    """Crea un perfil temporal único y devuelve rutas auxiliares."""
+
+    base = _resolver_base_perfiles_temporales(chrome_binario)
+    perfil = Path(tempfile.mkdtemp(prefix="profile_", dir=str(base)))
+    cache = perfil / "cache"
+    data_path = perfil / "data"
+    code_cache = perfil / "code_cache"
+    for ruta in (cache, data_path, code_cache):
+        ruta.mkdir(parents=True, exist_ok=True)
+
+    return perfil, cache, data_path, code_cache
+
+
+def _terminar_procesos_por_user_data(user_data_dir):
+    """Intenta finalizar procesos Chrome/Chromedriver que sigan usando el perfil."""
+
+    if not user_data_dir:
+        return
+
+    patron = f"--user-data-dir={user_data_dir}"
+    try:
+        resultado = subprocess.run(
+            ["pgrep", "-a", "-f", patron],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+    except FileNotFoundError:
+        return
+
+    if resultado.returncode != 0 or not resultado.stdout.strip():
+        return
+
+    for linea in resultado.stdout.strip().splitlines():
+        try:
+            pid = int(linea.split()[0])
+        except (ValueError, IndexError):
+            continue
+
+        for sig in (signal.SIGTERM, signal.SIGKILL):
+            try:
+                os.kill(pid, sig)
+                time.sleep(0.2)
+                if not os.path.exists(f"/proc/{pid}"):
+                    break
+            except ProcessLookupError:
+                break
+            except PermissionError:
+                break
+
+
+def _limpiar_directorio(path):
+    """Elimina un directorio de forma segura, renombrando si está en uso."""
+
+    if not path:
+        return
+
+    if not os.path.exists(path):
+        return
+
+    try:
+        shutil.rmtree(path, ignore_errors=False)
+        return
+    except (PermissionError, OSError):
+        pass
+
+    # Si no se pudo eliminar, renombrar y volver a intentar
+    try:
+        temp_name = f"{path}_pending_delete"
+        if os.path.exists(temp_name):
+            shutil.rmtree(temp_name, ignore_errors=True)
+        os.rename(path, temp_name)
+        shutil.rmtree(temp_name, ignore_errors=True)
+    except Exception:
+        shutil.rmtree(path, ignore_errors=True)
+
+
+def _reservar_puerto_libre():
+    with contextlib.closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as sock:
+        sock.bind(("127.0.0.1", 0))
+        sock.listen(1)
+        return sock.getsockname()[1]
 
 
 def _detener_xvfb():
@@ -426,11 +568,13 @@ def cargar_links_pendientes():
 
 def crear_driver_chrome(user_data_dir=None):
     """Crea una instancia de Chrome WebDriver con emulación móvil."""
+
     temp_user_data_dir = None
     chromedriver_log = None
-    try:
-        import random
+    cache_dir = data_path = code_cache_dir = None
 
+    try:
+        asegurar_xdg_runtime_dir()
         display = asegurar_entorno_grafico()
         if not display:
             escribir_log(
@@ -457,37 +601,30 @@ def crear_driver_chrome(user_data_dir=None):
         chrome_options = Options()
         chrome_options.binary_location = chrome_binario
 
-        # Usar puerto de debugging único para cada instancia
-        debug_port = random.randint(9223, 9999)
-        chrome_options.add_argument(f"--remote-debugging-port={debug_port}")
-
-        # Crear un perfil temporal dedicado por instancia para evitar bloqueos
-        directorios_a_limpiar = []
         if user_data_dir is None:
-            base_dir = Path(tempfile.gettempdir()) / "activador_movistar_profiles"
-            base_dir.mkdir(parents=True, exist_ok=True)
-            temp_user_data_dir = Path(
-                tempfile.mkdtemp(prefix="profile_", dir=str(base_dir))
+            temp_user_data_dir, cache_dir, data_path, code_cache_dir = _crear_perfil_temporal(
+                chrome_binario
             )
             user_data_dir = str(temp_user_data_dir)
         else:
             user_data_dir = os.path.abspath(user_data_dir)
             os.makedirs(user_data_dir, exist_ok=True)
             temp_user_data_dir = Path(user_data_dir)
+            cache_dir = temp_user_data_dir / "cache"
+            data_path = temp_user_data_dir / "data"
+            code_cache_dir = temp_user_data_dir / "code_cache"
+            for ruta in (cache_dir, data_path, code_cache_dir):
+                ruta.mkdir(parents=True, exist_ok=True)
 
-        directorios_a_limpiar.extend(
-            [
-                temp_user_data_dir,
-                Path.home() / ".config/chromium",
-                Path.home() / ".config/google-chrome",
-                Path.home() / "snap/chromium/common",
-            ]
-        )
-
-        directorios_a_limpiar = list(dict.fromkeys(directorios_a_limpiar))
+        directorios_a_limpiar = [
+            temp_user_data_dir,
+            Path.home() / ".config/chromium",
+            Path.home() / ".config/google-chrome",
+            Path.home() / "snap/chromium/common",
+        ]
 
         locks_eliminados = 0
-        for ruta in directorios_a_limpiar:
+        for ruta in dict.fromkeys(directorios_a_limpiar):
             locks_eliminados += _eliminar_archivos_singleton(ruta)
 
         if locks_eliminados:
@@ -495,31 +632,41 @@ def crear_driver_chrome(user_data_dir=None):
                 f"🧹 Eliminados {locks_eliminados} bloqueos 'Singleton*' antes de iniciar Chrome"
             )
 
+        debug_port = _reservar_puerto_libre()
+        chrome_options.add_argument(f"--remote-debugging-port={debug_port}")
         chrome_options.add_argument(f"--user-data-dir={user_data_dir}")
+        chrome_options.add_argument(f"--data-path={data_path}")
+        chrome_options.add_argument(f"--disk-cache-dir={cache_dir}")
+        chrome_options.add_argument(f"--disable-features=Translate,BackForwardCache,AutomationControlled")
+        chrome_options.add_argument(f"--force-device-scale-factor=1")
+        if code_cache_dir:
+            chrome_options.add_argument(f"--code-cache-dir={code_cache_dir}")
+        chrome_options.add_argument("--no-first-run")
+        chrome_options.add_argument("--no-default-browser-check")
+        chrome_options.add_argument("--disable-background-networking")
+        chrome_options.add_argument("--disable-component-update")
+        chrome_options.add_argument("--password-store=basic")
+        chrome_options.add_argument("--use-mock-keychain")
 
         print(f"🔧 Debug port: {debug_port}")
+        escribir_log(f"🔧 Debug port asignado: {debug_port}")
         escribir_log(f"📁 Perfil temporal de Chrome: {user_data_dir}")
 
-        # Añadir opciones base
         for option in Config.CHROME_BASE_OPTIONS:
             chrome_options.add_argument(option)
 
         chrome_options.add_argument("--disable-gpu")
-        chrome_options.add_argument("--window-size=375,812")  # iPhone XR size
+        chrome_options.add_argument("--window-size=375,812")
         chrome_options.add_argument(
             "--user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1"
         )
-
-        # CRÍTICO: Forzar auto-aprobación de permisos de cámara
         chrome_options.add_argument("--use-fake-ui-for-media-stream")
         chrome_options.add_argument("--auto-accept-camera-and-microphone-capture")
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--no-sandbox")
 
-        # Emulación móvil
         chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
 
-        # Permisos de cámara y otras configuraciones
         prefs = {
             "profile.default_content_setting_values.media_stream_camera": 1,
             "profile.default_content_setting_values.media_stream_mic": 1,
@@ -529,34 +676,38 @@ def crear_driver_chrome(user_data_dir=None):
         chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
         chrome_options.add_experimental_option("useAutomationExtension", False)
 
-        # Usar chromedriver detectado en el sistema y guardar logs temporales
         chromedriver_log = Path(tempfile.gettempdir()) / f"chromedriver_{uuid.uuid4().hex}.log"
         service = Service(chromedriver_path, log_path=str(chromedriver_log))
         escribir_log(f"📝 Log de ChromeDriver: {chromedriver_log}")
+
+        _terminar_procesos_por_user_data(user_data_dir)
+
         driver = webdriver.Chrome(service=service, options=chrome_options)
         setattr(driver, "_activador_chromedriver_log", str(chromedriver_log))
+        setattr(driver, "_activador_user_data_dir", user_data_dir)
+        setattr(
+            driver,
+            "_activador_extra_dirs",
+            [str(p) for p in (cache_dir, data_path, code_cache_dir) if p],
+        )
 
-        # Ejecutar script para ocultar webdriver
         driver.execute_script(
             "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
         )
 
         driver.set_page_load_timeout(Config.TIMEOUT_PAGINA)
-        driver.implicitly_wait(10)  # Espera implícita de 10 segundos
+        driver.implicitly_wait(10)
 
         return driver, user_data_dir
 
     except Exception as e:
         escribir_log(f"❌ Error al crear driver Chrome: {e}")
 
-        # Limpiar el directorio temporal si la inicialización falla
+        if user_data_dir:
+            _terminar_procesos_por_user_data(user_data_dir)
+
         if temp_user_data_dir and os.path.exists(temp_user_data_dir):
-            shutil.rmtree(temp_user_data_dir, ignore_errors=True)
-        try:
-            if chromedriver_log and os.path.exists(str(chromedriver_log)):
-                os.remove(str(chromedriver_log))
-        except Exception:
-            pass
+            _limpiar_directorio(str(temp_user_data_dir))
 
         return None, None
 
@@ -1155,23 +1306,25 @@ def activar_tarjeta_completa(numero_telefono, iccid, link, cam_controller):
         return False
     finally:
         print("🧹 Limpiando y finalizando proceso...")
+        perfil_en_uso = getattr(driver, "_activador_user_data_dir", user_data_dir)
         if driver:
-            driver.quit()
             try:
-                log_path = getattr(driver, "_activador_chromedriver_log", None)
-                if log_path and os.path.exists(log_path):
-                    os.remove(log_path)
-            except Exception:
-                pass
+                driver.quit()
+            finally:
+                try:
+                    log_path = getattr(driver, "_activador_chromedriver_log", None)
+                    if log_path and os.path.exists(log_path):
+                        os.remove(log_path)
+                except Exception:
+                    pass
 
-        # Limpiar directorio temporal de user-data
-        try:
-            import shutil
+        if perfil_en_uso:
+            _terminar_procesos_por_user_data(perfil_en_uso)
+            _limpiar_directorio(perfil_en_uso)
 
-            if user_data_dir and os.path.exists(user_data_dir):
-                shutil.rmtree(user_data_dir, ignore_errors=True)
-        except:
-            pass
+        extras = getattr(driver, "_activador_extra_dirs", []) if driver else []
+        for ruta in extras:
+            _limpiar_directorio(ruta)
 
 
 def activar_masivo_con_v4l2(links_data):
