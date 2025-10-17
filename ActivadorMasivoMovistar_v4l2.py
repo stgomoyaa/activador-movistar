@@ -4,6 +4,8 @@ Activador Masivo Movistar - Versión v4l2loopback (SIN OBS)
 Adaptado para usar cámara virtual de Linux en lugar de OBS Studio
 """
 
+VERSION = "1.0"
+
 import tempfile
 import time
 import threading
@@ -938,7 +940,7 @@ def activar_tarjeta_completa(numero_telefono, iccid, link, cam_controller):
 def activar_masivo_con_v4l2(links_data):
     """Orquesta la activación secuencial de múltiples tarjetas."""
     escribir_log(
-        f"🚀 INICIANDO PROCESO DE ACTIVACIÓN SECUENCIAL DE {len(links_data)} TARJETAS (v4l2loopback)"
+        f"🚀 INICIANDO PROCESO DE ACTIVACIÓN SECUENCIAL DE {len(links_data)} TARJETAS (v4l2loopback v{VERSION})"
     )
 
     # Crear controlador de cámara virtual
@@ -981,7 +983,7 @@ def activar_masivo_con_v4l2(links_data):
 def main():
     """Punto de entrada principal del script."""
     print("=" * 50)
-    print(">>> ACTIVADOR MASIVO MOVISTAR - v4l2loopback <<<")
+    print(f">>> ACTIVADOR MASIVO MOVISTAR v{VERSION} - v4l2loopback <<<")
     print(">>> SIN OBS - Usando Cámara Virtual de Linux <<<")
     print("=" * 50 + "\n")
 
@@ -1027,7 +1029,7 @@ def main():
 
     escribir_log(
         "=" * 60
-        + "\nINICIANDO PROCESO DE ACTIVACIÓN MASIVA (v4l2loopback)\n"
+        + f"\nINICIANDO PROCESO DE ACTIVACIÓN MASIVA (v4l2loopback v{VERSION})\n"
         + "=" * 60
     )
     inicio = time.time()
