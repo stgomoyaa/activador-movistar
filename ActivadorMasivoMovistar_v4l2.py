@@ -4,7 +4,7 @@ Activador Masivo Movistar - Versión v4l2loopback (SIN OBS)
 Adaptado para usar cámara virtual de Linux en lugar de OBS Studio
 """
 
-VERSION = "1.5"
+VERSION = "1.6"
 
 import atexit
 import contextlib
@@ -17,6 +17,7 @@ import sys
 import subprocess
 import shutil
 import uuid
+import signal
 from pathlib import Path
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -53,6 +54,27 @@ class Config:
         "--use-fake-ui-for-media-stream",
         "--use-fake-device-for-media-stream",
         "--log-level=3",
+    ]
+
+    # Configuración del entorno gráfico para servidores sin interfaz
+    XVFB_DISPLAY = os.environ.get("ACTIVADOR_XVFB_DISPLAY", ":99")
+    XVFB_SCREEN = os.environ.get("ACTIVADOR_XVFB_SCREEN", "1280x720x24")
+    XVFB_EXTRA_ARGS = os.environ.get("ACTIVADOR_XVFB_EXTRA", "-ac").split()
+
+    # Posibles ubicaciones del binario de Chromium/Chrome
+    CHROME_BIN_CANDIDATES = [
+        os.environ.get("CHROME_BINARY"),
+        "/usr/bin/chromium-browser",
+        "/usr/bin/chromium",
+        "/snap/bin/chromium",
+        "/usr/bin/google-chrome",
+        "/usr/bin/google-chrome-stable",
+    ]
+
+    # Posibles ubicaciones para chromedriver
+    CHROMEDRIVER_CANDIDATES = [
+        os.environ.get("CHROMEDRIVER_PATH"),
+        "/usr/bin/chromedriver",
     ]
 
     # Configuración del entorno gráfico para servidores sin interfaz
@@ -354,6 +376,70 @@ def resolver_chromedriver():
     return None
 
 
+def cerrar_procesos_chrome_residuales(timeout=5):
+    """Intenta finalizar procesos Chrome/Chromedriver residuales del flujo anterior."""
+
+    patrones = ["--remote-debugging-port", "chromedriver --port="]
+    pids_a_finalizar = set()
+
+    for patron in patrones:
+        try:
+            resultado = subprocess.run(
+                ["pgrep", "-a", "-f", patron],
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+        except FileNotFoundError:
+            # pgrep no disponible, no podemos gestionar procesos
+            return
+
+        if resultado.returncode != 0 or not resultado.stdout.strip():
+            continue
+
+        for linea in resultado.stdout.splitlines():
+            partes = linea.strip().split(" ", 1)
+            if not partes:
+                continue
+            try:
+                pid = int(partes[0])
+            except ValueError:
+                continue
+            if pid != os.getpid():
+                pids_a_finalizar.add(pid)
+
+    if not pids_a_finalizar:
+        return
+
+    escribir_log(
+        f"🧼 Cerrando {len(pids_a_finalizar)} procesos residuales de Chrome/Chromedriver"
+    )
+
+    for pid in pids_a_finalizar:
+        try:
+            os.kill(pid, signal.SIGTERM)
+        except ProcessLookupError:
+            continue
+        except PermissionError:
+            continue
+
+    fin = time.time() + timeout
+    vivos = set(pids_a_finalizar)
+    while vivos and time.time() < fin:
+        for pid in list(vivos):
+            if not os.path.exists(f"/proc/{pid}"):
+                vivos.discard(pid)
+        if vivos:
+            time.sleep(0.2)
+
+    for pid in vivos:
+        try:
+            os.kill(pid, signal.SIGKILL)
+        except ProcessLookupError:
+            continue
+        except PermissionError:
+            continue
+
 class ControladorCamaraVirtual:
     """Controlador para manejar v4l2loopback (reemplazo de OBS)"""
 
@@ -507,6 +593,8 @@ def crear_driver_chrome():
             )
             return None
 
+        cerrar_procesos_chrome_residuales()
+
         chrome_binario = resolver_chrome_binario()
         if not chrome_binario:
             escribir_log(
@@ -538,6 +626,7 @@ def crear_driver_chrome():
         chrome_options.add_argument("--disable-component-update")
         chrome_options.add_argument("--password-store=basic")
         chrome_options.add_argument("--use-mock-keychain")
+        chrome_options.add_argument("--incognito")
 
         print(f"🔧 Debug port: {debug_port}")
         escribir_log(f"🔧 Debug port asignado: {debug_port}")
@@ -550,10 +639,7 @@ def crear_driver_chrome():
         chrome_options.add_argument(
             "--user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1"
         )
-        chrome_options.add_argument("--use-fake-ui-for-media-stream")
         chrome_options.add_argument("--auto-accept-camera-and-microphone-capture")
-        chrome_options.add_argument("--disable-dev-shm-usage")
-        chrome_options.add_argument("--no-sandbox")
 
         chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
 
@@ -1178,6 +1264,7 @@ def activar_tarjeta_completa(numero_telefono, iccid, link, cam_controller):
                         os.remove(log_path)
                 except Exception:
                     pass
+        cerrar_procesos_chrome_residuales()
 
 
 def activar_masivo_con_v4l2(links_data):
