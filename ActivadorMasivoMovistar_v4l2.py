@@ -4,7 +4,7 @@ Activador Masivo Movistar - Versión v4l2loopback (SIN OBS)
 Adaptado para usar cámara virtual de Linux en lugar de OBS Studio
 """
 
-VERSION = "1.3"
+VERSION = "1.4"
 
 import atexit
 import contextlib
@@ -54,6 +54,27 @@ class Config:
         "--use-fake-ui-for-media-stream",
         "--use-fake-device-for-media-stream",
         "--log-level=3",
+    ]
+
+    # Configuración del entorno gráfico para servidores sin interfaz
+    XVFB_DISPLAY = os.environ.get("ACTIVADOR_XVFB_DISPLAY", ":99")
+    XVFB_SCREEN = os.environ.get("ACTIVADOR_XVFB_SCREEN", "1280x720x24")
+    XVFB_EXTRA_ARGS = os.environ.get("ACTIVADOR_XVFB_EXTRA", "-ac").split()
+
+    # Posibles ubicaciones del binario de Chromium/Chrome
+    CHROME_BIN_CANDIDATES = [
+        os.environ.get("CHROME_BINARY"),
+        "/usr/bin/chromium-browser",
+        "/usr/bin/chromium",
+        "/snap/bin/chromium",
+        "/usr/bin/google-chrome",
+        "/usr/bin/google-chrome-stable",
+    ]
+
+    # Posibles ubicaciones para chromedriver
+    CHROMEDRIVER_CANDIDATES = [
+        os.environ.get("CHROMEDRIVER_PATH"),
+        "/usr/bin/chromedriver",
     ]
 
     # Configuración del entorno gráfico para servidores sin interfaz
@@ -276,6 +297,34 @@ def _terminar_procesos_por_user_data(user_data_dir):
                 break
             except PermissionError:
                 break
+
+
+def _esperar_liberacion_user_data(user_data_dir, timeout=10):
+    """Espera a que ningún proceso esté usando --user-data-dir antes de continuar."""
+
+    if not user_data_dir:
+        return True
+
+    patron = f"--user-data-dir={user_data_dir}"
+    inicio = time.time()
+
+    while time.time() - inicio < timeout:
+        try:
+            resultado = subprocess.run(
+                ["pgrep", "-a", "-f", patron],
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+        except FileNotFoundError:
+            return True
+
+        if resultado.returncode != 0 or not resultado.stdout.strip():
+            return True
+
+        time.sleep(0.5)
+
+    return False
 
 
 def _limpiar_directorio(path):
@@ -681,6 +730,15 @@ def crear_driver_chrome(user_data_dir=None):
         escribir_log(f"📝 Log de ChromeDriver: {chromedriver_log}")
 
         _terminar_procesos_por_user_data(user_data_dir)
+
+        if not _esperar_liberacion_user_data(user_data_dir):
+            escribir_log(f"❌ Timeout esperando liberación de perfil: {user_data_dir}")
+            if chromedriver_log and os.path.exists(chromedriver_log):
+                with contextlib.suppress(OSError):
+                    os.remove(chromedriver_log)
+            if temp_user_data_dir and os.path.exists(temp_user_data_dir):
+                _limpiar_directorio(str(temp_user_data_dir))
+            return None, None
 
         driver = webdriver.Chrome(service=service, options=chrome_options)
         setattr(driver, "_activador_chromedriver_log", str(chromedriver_log))
