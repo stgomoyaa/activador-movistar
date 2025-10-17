@@ -4,6 +4,8 @@ Activador Masivo Movistar - Versión v4l2loopback (SIN OBS)
 Adaptado para usar cámara virtual de Linux en lugar de OBS Studio
 """
 
+VERSION = "1.0"
+
 import tempfile
 import time
 import threading
@@ -252,8 +254,8 @@ def cargar_links_pendientes():
 
 def crear_driver_chrome(user_data_dir=None):
     """Crea una instancia de Chrome WebDriver con emulación móvil."""
+    temp_user_data_dir = None
     try:
-        import uuid
         import random
 
         mobile_emulation = {"deviceName": "iPhone XR"}
@@ -261,12 +263,18 @@ def crear_driver_chrome(user_data_dir=None):
         chrome_options = Options()
         chrome_options.binary_location = "/usr/bin/chromium-browser"
 
-        # NO USAR user-data-dir - dejar que Chrome lo maneje automáticamente
         # Usar puerto de debugging único para cada instancia
         debug_port = random.randint(9223, 9999)
         chrome_options.add_argument(f"--remote-debugging-port={debug_port}")
 
-        user_data_dir = "/tmp/chrome_session"  # Valor dummy para retornar
+        # Crear un perfil temporal dedicado por instancia para evitar bloqueos
+        if user_data_dir is None:
+            temp_user_data_dir = tempfile.mkdtemp(prefix="chrome-profile-")
+            user_data_dir = temp_user_data_dir
+        else:
+            os.makedirs(user_data_dir, exist_ok=True)
+        chrome_options.add_argument(f"--user-data-dir={user_data_dir}")
+
         print(f"🔧 Debug port: {debug_port}")
 
         # Añadir opciones base
@@ -319,6 +327,11 @@ def crear_driver_chrome(user_data_dir=None):
 
     except Exception as e:
         escribir_log(f"❌ Error al crear driver Chrome: {e}")
+
+        # Limpiar el directorio temporal si la inicialización falla
+        if temp_user_data_dir and os.path.exists(temp_user_data_dir):
+            shutil.rmtree(temp_user_data_dir, ignore_errors=True)
+
         return None, None
 
 
@@ -927,7 +940,7 @@ def activar_tarjeta_completa(numero_telefono, iccid, link, cam_controller):
 def activar_masivo_con_v4l2(links_data):
     """Orquesta la activación secuencial de múltiples tarjetas."""
     escribir_log(
-        f"🚀 INICIANDO PROCESO DE ACTIVACIÓN SECUENCIAL DE {len(links_data)} TARJETAS (v4l2loopback)"
+        f"🚀 INICIANDO PROCESO DE ACTIVACIÓN SECUENCIAL DE {len(links_data)} TARJETAS (v4l2loopback v{VERSION})"
     )
 
     # Crear controlador de cámara virtual
@@ -970,7 +983,7 @@ def activar_masivo_con_v4l2(links_data):
 def main():
     """Punto de entrada principal del script."""
     print("=" * 50)
-    print(">>> ACTIVADOR MASIVO MOVISTAR - v4l2loopback <<<")
+    print(f">>> ACTIVADOR MASIVO MOVISTAR v{VERSION} - v4l2loopback <<<")
     print(">>> SIN OBS - Usando Cámara Virtual de Linux <<<")
     print("=" * 50 + "\n")
 
@@ -1016,7 +1029,7 @@ def main():
 
     escribir_log(
         "=" * 60
-        + "\nINICIANDO PROCESO DE ACTIVACIÓN MASIVA (v4l2loopback)\n"
+        + f"\nINICIANDO PROCESO DE ACTIVACIÓN MASIVA (v4l2loopback v{VERSION})\n"
         + "=" * 60
     )
     inicio = time.time()
