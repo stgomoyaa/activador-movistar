@@ -4,8 +4,9 @@ Activador Masivo Movistar - Versión v4l2loopback (SIN OBS)
 Adaptado para usar cámara virtual de Linux en lugar de OBS Studio
 """
 
-VERSION = "1.0"
+VERSION = "1.1"
 
+import atexit
 import tempfile
 import time
 import threading
@@ -13,6 +14,7 @@ import os
 import sys
 import subprocess
 import shutil
+import uuid
 from pathlib import Path
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -49,6 +51,27 @@ class Config:
         "--use-fake-ui-for-media-stream",
         "--use-fake-device-for-media-stream",
         "--log-level=3",
+    ]
+
+    # Configuración del entorno gráfico para servidores sin interfaz
+    XVFB_DISPLAY = os.environ.get("ACTIVADOR_XVFB_DISPLAY", ":99")
+    XVFB_SCREEN = os.environ.get("ACTIVADOR_XVFB_SCREEN", "1280x720x24")
+    XVFB_EXTRA_ARGS = os.environ.get("ACTIVADOR_XVFB_EXTRA", "-ac").split()
+
+    # Posibles ubicaciones del binario de Chromium/Chrome
+    CHROME_BIN_CANDIDATES = [
+        os.environ.get("CHROME_BINARY"),
+        "/usr/bin/chromium-browser",
+        "/usr/bin/chromium",
+        "/snap/bin/chromium",
+        "/usr/bin/google-chrome",
+        "/usr/bin/google-chrome-stable",
+    ]
+
+    # Posibles ubicaciones para chromedriver
+    CHROMEDRIVER_CANDIDATES = [
+        os.environ.get("CHROMEDRIVER_PATH"),
+        "/usr/bin/chromedriver",
     ]
 
     # Tiempos
@@ -101,6 +124,23 @@ class Locators:
 
 # Lock para logs
 log_lock = threading.Lock()
+xvfb_proceso = None
+
+
+def _detener_xvfb():
+    """Detiene el proceso de Xvfb si fue iniciado por el script."""
+    global xvfb_proceso
+    if xvfb_proceso and xvfb_proceso.poll() is None:
+        try:
+            xvfb_proceso.terminate()
+            xvfb_proceso.wait(timeout=5)
+        except subprocess.TimeoutExpired:
+            xvfb_proceso.kill()
+        finally:
+            xvfb_proceso = None
+
+
+atexit.register(_detener_xvfb)
 
 
 def escribir_log(mensaje):
@@ -111,6 +151,96 @@ def escribir_log(mensaje):
         with open(Config.LOG_FILE, "a", encoding="utf-8") as f:
             f.write(linea)
     print(f"[{timestamp}] {mensaje}")
+
+
+def asegurar_entorno_grafico():
+    """Garantiza que exista un DISPLAY disponible, iniciando Xvfb si es necesario."""
+    global xvfb_proceso
+
+    if os.environ.get("DISPLAY"):
+        return os.environ["DISPLAY"]
+
+    display = Config.XVFB_DISPLAY
+
+    if xvfb_proceso and xvfb_proceso.poll() is None:
+        os.environ["DISPLAY"] = display
+        return display
+
+    try:
+        resultado = subprocess.run(
+            ["pgrep", "-f", f"Xvfb {display}"],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            check=False,
+        )
+        if resultado.returncode == 0:
+            os.environ["DISPLAY"] = display
+            return display
+    except Exception:
+        pass
+
+    if not shutil.which("Xvfb"):
+        escribir_log(
+            "❌ Xvfb no está instalado. Instala con 'sudo apt install xvfb' para ejecutar Chromium en servidores."
+        )
+        return None
+
+    comando = [
+        "Xvfb",
+        display,
+        "-screen",
+        "0",
+        Config.XVFB_SCREEN,
+        *Config.XVFB_EXTRA_ARGS,
+    ]
+
+    try:
+        xvfb_proceso = subprocess.Popen(
+            comando, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+        )
+        time.sleep(1)
+        if xvfb_proceso.poll() is not None:
+            escribir_log(
+                "❌ No se pudo iniciar Xvfb automáticamente. Revisa permisos o instala el paquete."
+            )
+            xvfb_proceso = None
+            return None
+        os.environ["DISPLAY"] = display
+        escribir_log(f"🖥️ Xvfb iniciado automáticamente en {display}")
+        return display
+    except FileNotFoundError:
+        escribir_log(
+            "❌ Xvfb no está disponible en el sistema. Instala con 'sudo apt install xvfb'."
+        )
+    except Exception as exc:
+        escribir_log(f"❌ Error al iniciar Xvfb: {exc}")
+
+    return None
+
+
+def resolver_chrome_binario():
+    """Devuelve la ruta al binario de Chromium/Chrome disponible."""
+    for candidato in Config.CHROME_BIN_CANDIDATES:
+        if not candidato:
+            continue
+        ruta = shutil.which(candidato) if not os.path.isabs(candidato) else candidato
+        if ruta and os.path.exists(ruta):
+            return ruta
+    return None
+
+
+def resolver_chromedriver():
+    """Devuelve la ruta al ejecutable de chromedriver disponible."""
+    for candidato in Config.CHROMEDRIVER_CANDIDATES:
+        if not candidato:
+            continue
+        ruta = shutil.which(candidato) if not os.path.isabs(candidato) else candidato
+        if ruta and os.path.exists(ruta):
+            return ruta
+    ruta = shutil.which("chromedriver")
+    if ruta and os.path.exists(ruta):
+        return ruta
+    return None
 
 
 class ControladorCamaraVirtual:
@@ -258,10 +388,31 @@ def crear_driver_chrome(user_data_dir=None):
     try:
         import random
 
+        display = asegurar_entorno_grafico()
+        if not display:
+            escribir_log(
+                "❌ No se pudo preparar un entorno gráfico para Chromium. Abortando creación del driver."
+            )
+            return None, None
+
+        chrome_binario = resolver_chrome_binario()
+        if not chrome_binario:
+            escribir_log(
+                "❌ No se encontró el binario de Chromium/Chrome. Instala 'chromium-browser' o define CHROME_BINARY."
+            )
+            return None, None
+
+        chromedriver_path = resolver_chromedriver()
+        if not chromedriver_path:
+            escribir_log(
+                "❌ No se encontró el ejecutable de chromedriver. Instala 'chromedriver' o define CHROMEDRIVER_PATH."
+            )
+            return None, None
+
         mobile_emulation = {"deviceName": "iPhone XR"}
 
         chrome_options = Options()
-        chrome_options.binary_location = "/usr/bin/chromium-browser"
+        chrome_options.binary_location = chrome_binario
 
         # Usar puerto de debugging único para cada instancia
         debug_port = random.randint(9223, 9999)
@@ -269,20 +420,22 @@ def crear_driver_chrome(user_data_dir=None):
 
         # Crear un perfil temporal dedicado por instancia para evitar bloqueos
         if user_data_dir is None:
-            temp_user_data_dir = tempfile.mkdtemp(prefix="chrome-profile-")
-            user_data_dir = temp_user_data_dir
+            base_dir = Path(tempfile.gettempdir()) / "activador_movistar_profiles"
+            base_dir.mkdir(parents=True, exist_ok=True)
+            temp_user_data_dir = base_dir / f"profile_{uuid.uuid4().hex}"
+            user_data_dir = str(temp_user_data_dir)
         else:
+            user_data_dir = os.path.abspath(user_data_dir)
             os.makedirs(user_data_dir, exist_ok=True)
         chrome_options.add_argument(f"--user-data-dir={user_data_dir}")
 
         print(f"🔧 Debug port: {debug_port}")
+        escribir_log(f"📁 Perfil temporal de Chrome: {user_data_dir}")
 
         # Añadir opciones base
         for option in Config.CHROME_BASE_OPTIONS:
             chrome_options.add_argument(option)
 
-        # SIN HEADLESS - usar con Xvfb
-        # chrome_options.add_argument('--headless=new')
         chrome_options.add_argument("--disable-gpu")
         chrome_options.add_argument("--window-size=375,812")  # iPhone XR size
         chrome_options.add_argument(
@@ -294,9 +447,6 @@ def crear_driver_chrome(user_data_dir=None):
         chrome_options.add_argument("--auto-accept-camera-and-microphone-capture")
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--no-sandbox")
-
-        # Configurar display virtual (Xvfb debe estar corriendo)
-        os.environ["DISPLAY"] = ":99"
 
         # Emulación móvil
         chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
@@ -311,8 +461,8 @@ def crear_driver_chrome(user_data_dir=None):
         chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
         chrome_options.add_experimental_option("useAutomationExtension", False)
 
-        # Usar chromedriver del sistema
-        service = Service("/usr/bin/chromedriver")
+        # Usar chromedriver detectado en el sistema
+        service = Service(chromedriver_path)
         driver = webdriver.Chrome(service=service, options=chrome_options)
 
         # Ejecutar script para ocultar webdriver
@@ -648,6 +798,11 @@ def activar_tarjeta_completa(numero_telefono, iccid, link, cam_controller):
             )
             subprocess.run(
                 ["pkill", "-9", "chromium"], stderr=subprocess.DEVNULL, timeout=2
+            )
+            subprocess.run(
+                ["pkill", "-9", "chromium-browser"],
+                stderr=subprocess.DEVNULL,
+                timeout=2,
             )
             time.sleep(0.5)  # Dar tiempo a que se limpien
         except:
