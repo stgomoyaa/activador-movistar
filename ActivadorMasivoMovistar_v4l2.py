@@ -4,7 +4,7 @@ Activador Masivo Movistar - Versión v4l2loopback (SIN OBS)
 Adaptado para usar cámara virtual de Linux en lugar de OBS Studio
 """
 
-VERSION = "1.6"
+VERSION = "1.7"
 
 import atexit
 import contextlib
@@ -54,132 +54,6 @@ class Config:
         "--use-fake-ui-for-media-stream",
         "--use-fake-device-for-media-stream",
         "--log-level=3",
-    ]
-
-    # Configuración del entorno gráfico para servidores sin interfaz
-    XVFB_DISPLAY = os.environ.get("ACTIVADOR_XVFB_DISPLAY", ":99")
-    XVFB_SCREEN = os.environ.get("ACTIVADOR_XVFB_SCREEN", "1280x720x24")
-    XVFB_EXTRA_ARGS = os.environ.get("ACTIVADOR_XVFB_EXTRA", "-ac").split()
-
-    # Posibles ubicaciones del binario de Chromium/Chrome
-    CHROME_BIN_CANDIDATES = [
-        os.environ.get("CHROME_BINARY"),
-        "/usr/bin/chromium-browser",
-        "/usr/bin/chromium",
-        "/snap/bin/chromium",
-        "/usr/bin/google-chrome",
-        "/usr/bin/google-chrome-stable",
-    ]
-
-    # Posibles ubicaciones para chromedriver
-    CHROMEDRIVER_CANDIDATES = [
-        os.environ.get("CHROMEDRIVER_PATH"),
-        "/usr/bin/chromedriver",
-    ]
-
-    # Configuración del entorno gráfico para servidores sin interfaz
-    XVFB_DISPLAY = os.environ.get("ACTIVADOR_XVFB_DISPLAY", ":99")
-    XVFB_SCREEN = os.environ.get("ACTIVADOR_XVFB_SCREEN", "1280x720x24")
-    XVFB_EXTRA_ARGS = os.environ.get("ACTIVADOR_XVFB_EXTRA", "-ac").split()
-
-    # Posibles ubicaciones del binario de Chromium/Chrome
-    CHROME_BIN_CANDIDATES = [
-        os.environ.get("CHROME_BINARY"),
-        "/usr/bin/chromium-browser",
-        "/usr/bin/chromium",
-        "/snap/bin/chromium",
-        "/usr/bin/google-chrome",
-        "/usr/bin/google-chrome-stable",
-    ]
-
-    # Posibles ubicaciones para chromedriver
-    CHROMEDRIVER_CANDIDATES = [
-        os.environ.get("CHROMEDRIVER_PATH"),
-        "/usr/bin/chromedriver",
-    ]
-
-    # Configuración del entorno gráfico para servidores sin interfaz
-    XVFB_DISPLAY = os.environ.get("ACTIVADOR_XVFB_DISPLAY", ":99")
-    XVFB_SCREEN = os.environ.get("ACTIVADOR_XVFB_SCREEN", "1280x720x24")
-    XVFB_EXTRA_ARGS = os.environ.get("ACTIVADOR_XVFB_EXTRA", "-ac").split()
-
-    # Posibles ubicaciones del binario de Chromium/Chrome
-    CHROME_BIN_CANDIDATES = [
-        os.environ.get("CHROME_BINARY"),
-        "/usr/bin/chromium-browser",
-        "/usr/bin/chromium",
-        "/snap/bin/chromium",
-        "/usr/bin/google-chrome",
-        "/usr/bin/google-chrome-stable",
-    ]
-
-    # Posibles ubicaciones para chromedriver
-    CHROMEDRIVER_CANDIDATES = [
-        os.environ.get("CHROMEDRIVER_PATH"),
-        "/usr/bin/chromedriver",
-    ]
-
-    # Configuración del entorno gráfico para servidores sin interfaz
-    XVFB_DISPLAY = os.environ.get("ACTIVADOR_XVFB_DISPLAY", ":99")
-    XVFB_SCREEN = os.environ.get("ACTIVADOR_XVFB_SCREEN", "1280x720x24")
-    XVFB_EXTRA_ARGS = os.environ.get("ACTIVADOR_XVFB_EXTRA", "-ac").split()
-
-    # Posibles ubicaciones del binario de Chromium/Chrome
-    CHROME_BIN_CANDIDATES = [
-        os.environ.get("CHROME_BINARY"),
-        "/usr/bin/chromium-browser",
-        "/usr/bin/chromium",
-        "/snap/bin/chromium",
-        "/usr/bin/google-chrome",
-        "/usr/bin/google-chrome-stable",
-    ]
-
-    # Posibles ubicaciones para chromedriver
-    CHROMEDRIVER_CANDIDATES = [
-        os.environ.get("CHROMEDRIVER_PATH"),
-        "/usr/bin/chromedriver",
-    ]
-
-    # Configuración del entorno gráfico para servidores sin interfaz
-    XVFB_DISPLAY = os.environ.get("ACTIVADOR_XVFB_DISPLAY", ":99")
-    XVFB_SCREEN = os.environ.get("ACTIVADOR_XVFB_SCREEN", "1280x720x24")
-    XVFB_EXTRA_ARGS = os.environ.get("ACTIVADOR_XVFB_EXTRA", "-ac").split()
-
-    # Posibles ubicaciones del binario de Chromium/Chrome
-    CHROME_BIN_CANDIDATES = [
-        os.environ.get("CHROME_BINARY"),
-        "/usr/bin/chromium-browser",
-        "/usr/bin/chromium",
-        "/snap/bin/chromium",
-        "/usr/bin/google-chrome",
-        "/usr/bin/google-chrome-stable",
-    ]
-
-    # Posibles ubicaciones para chromedriver
-    CHROMEDRIVER_CANDIDATES = [
-        os.environ.get("CHROMEDRIVER_PATH"),
-        "/usr/bin/chromedriver",
-    ]
-
-    # Configuración del entorno gráfico para servidores sin interfaz
-    XVFB_DISPLAY = os.environ.get("ACTIVADOR_XVFB_DISPLAY", ":99")
-    XVFB_SCREEN = os.environ.get("ACTIVADOR_XVFB_SCREEN", "1280x720x24")
-    XVFB_EXTRA_ARGS = os.environ.get("ACTIVADOR_XVFB_EXTRA", "-ac").split()
-
-    # Posibles ubicaciones del binario de Chromium/Chrome
-    CHROME_BIN_CANDIDATES = [
-        os.environ.get("CHROME_BINARY"),
-        "/usr/bin/chromium-browser",
-        "/usr/bin/chromium",
-        "/snap/bin/chromium",
-        "/usr/bin/google-chrome",
-        "/usr/bin/google-chrome-stable",
-    ]
-
-    # Posibles ubicaciones para chromedriver
-    CHROMEDRIVER_CANDIDATES = [
-        os.environ.get("CHROMEDRIVER_PATH"),
-        "/usr/bin/chromedriver",
     ]
 
     # Configuración del entorno gráfico para servidores sin interfaz
@@ -400,7 +274,13 @@ def resolver_chromedriver():
 def cerrar_procesos_chrome_residuales(timeout=5):
     """Intenta finalizar procesos Chrome/Chromedriver residuales del flujo anterior."""
 
-    patrones = ["--remote-debugging-port", "chromedriver --port="]
+    patrones = [
+        "--remote-debugging-port",
+        "chromedriver --port=",
+        "chromium-browser",
+        "google-chrome",
+        "chrome --type=",
+    ]
     pids_a_finalizar = set()
 
     for patron in patrones:
@@ -603,109 +483,137 @@ def cargar_links_pendientes():
 def crear_driver_chrome():
     """Crea una instancia de Chrome WebDriver con emulación móvil."""
 
-    chromedriver_log = None
-    user_data_dir = None
+    asegurar_xdg_runtime_dir()
+    display = asegurar_entorno_grafico()
+    if not display:
+        escribir_log(
+            "❌ No se pudo preparar un entorno gráfico para Chromium. Abortando creación del driver."
+        )
+        return None
 
-    try:
-        asegurar_xdg_runtime_dir()
-        display = asegurar_entorno_grafico()
-        if not display:
-            escribir_log(
-                "❌ No se pudo preparar un entorno gráfico para Chromium. Abortando creación del driver."
-            )
-            return None
+    chrome_binario = resolver_chrome_binario()
+    if not chrome_binario:
+        escribir_log(
+            "❌ No se encontró el binario de Chromium/Chrome. Instala 'chromium-browser' o define CHROME_BINARY."
+        )
+        return None
 
+    chromedriver_path = resolver_chromedriver()
+    if not chromedriver_path:
+        escribir_log(
+            "❌ No se encontró el ejecutable de chromedriver. Instala 'chromedriver' o define CHROMEDRIVER_PATH."
+        )
+        return None
+
+    mobile_emulation = {"deviceName": "iPhone XR"}
+    base_prefs = {
+        "profile.default_content_setting_values.media_stream_camera": 1,
+        "profile.default_content_setting_values.media_stream_mic": 1,
+        "profile.default_content_setting_values.notifications": 2,
+    }
+
+    max_intentos = 3
+    ultimo_error = None
+
+    for intento in range(1, max_intentos + 1):
         cerrar_procesos_chrome_residuales()
 
-        chrome_binario = resolver_chrome_binario()
-        if not chrome_binario:
-            escribir_log(
-                "❌ No se encontró el binario de Chromium/Chrome. Instala 'chromium-browser' o define CHROME_BINARY."
-            )
-            return None
-
-        chromedriver_path = resolver_chromedriver()
-        if not chromedriver_path:
-            escribir_log(
-                "❌ No se encontró el ejecutable de chromedriver. Instala 'chromedriver' o define CHROMEDRIVER_PATH."
-            )
-            return None
-
-        mobile_emulation = {"deviceName": "iPhone XR"}
-
-        chrome_options = Options()
-        chrome_options.binary_location = chrome_binario
-
-        debug_port = _reservar_puerto_libre()
-        chrome_options.add_argument(f"--remote-debugging-port={debug_port}")
-        chrome_options.add_argument(
-            "--disable-features=Translate,BackForwardCache,AutomationControlled"
-        )
-        chrome_options.add_argument("--force-device-scale-factor=1")
-        chrome_options.add_argument("--no-first-run")
-        chrome_options.add_argument("--no-default-browser-check")
-        chrome_options.add_argument("--disable-background-networking")
-        chrome_options.add_argument("--disable-component-update")
-        chrome_options.add_argument("--password-store=basic")
-        chrome_options.add_argument("--use-mock-keychain")
-        chrome_options.add_argument("--incognito")
-
         user_data_dir = tempfile.mkdtemp(prefix="activador_movistar_profile_")
-        chrome_options.add_argument(f"--user-data-dir={user_data_dir}")
-
-        print(f"🔧 Debug port: {debug_port}")
-        escribir_log(f"🔧 Debug port asignado: {debug_port}")
-
-        for option in Config.CHROME_BASE_OPTIONS:
-            chrome_options.add_argument(option)
-
-        chrome_options.add_argument("--disable-gpu")
-        chrome_options.add_argument("--window-size=375,812")
-        chrome_options.add_argument(
-            "--user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1"
-        )
-        chrome_options.add_argument("--auto-accept-camera-and-microphone-capture")
-
-        chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
-
-        prefs = {
-            "profile.default_content_setting_values.media_stream_camera": 1,
-            "profile.default_content_setting_values.media_stream_mic": 1,
-            "profile.default_content_setting_values.notifications": 2,
-        }
-        chrome_options.add_experimental_option("prefs", prefs)
-        chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
-        chrome_options.add_experimental_option("useAutomationExtension", False)
-
         chromedriver_log = Path(tempfile.gettempdir()) / f"chromedriver_{uuid.uuid4().hex}.log"
-        service = Service(chromedriver_path, log_path=str(chromedriver_log))
-        escribir_log(f"📝 Log de ChromeDriver: {chromedriver_log}")
 
-        driver = webdriver.Chrome(service=service, options=chrome_options)
-        setattr(driver, "_activador_chromedriver_log", str(chromedriver_log))
-        setattr(driver, "_activador_user_data_dir", user_data_dir)
+        try:
+            chrome_options = Options()
+            chrome_options.binary_location = chrome_binario
 
-        driver.execute_script(
-            "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
+            debug_port = _reservar_puerto_libre()
+            chrome_options.add_argument(f"--remote-debugging-port={debug_port}")
+            chrome_options.add_argument(
+                "--disable-features=Translate,BackForwardCache,AutomationControlled"
+            )
+            chrome_options.add_argument("--force-device-scale-factor=1")
+            chrome_options.add_argument("--no-first-run")
+            chrome_options.add_argument("--no-default-browser-check")
+            chrome_options.add_argument("--disable-background-networking")
+            chrome_options.add_argument("--disable-component-update")
+            chrome_options.add_argument("--password-store=basic")
+            chrome_options.add_argument("--use-mock-keychain")
+            chrome_options.add_argument("--incognito")
+            chrome_options.add_argument(f"--user-data-dir={user_data_dir}")
+
+            print(f"🔧 Debug port: {debug_port}")
+            escribir_log(f"🔧 Debug port asignado: {debug_port}")
+            escribir_log(f"📁 Perfil temporal de Chrome: {user_data_dir}")
+            print(f"📁 Perfil temporal de Chrome: {user_data_dir}")
+
+            for option in Config.CHROME_BASE_OPTIONS:
+                chrome_options.add_argument(option)
+
+            chrome_options.add_argument("--disable-gpu")
+            chrome_options.add_argument("--window-size=375,812")
+            chrome_options.add_argument(
+                "--user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1"
+            )
+            chrome_options.add_argument("--auto-accept-camera-and-microphone-capture")
+
+            chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
+            chrome_options.add_experimental_option("prefs", base_prefs)
+            chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+            chrome_options.add_experimental_option("useAutomationExtension", False)
+
+            service = Service(chromedriver_path, log_path=str(chromedriver_log))
+            escribir_log(f"📝 Log de ChromeDriver: {chromedriver_log}")
+
+            driver = webdriver.Chrome(service=service, options=chrome_options)
+            setattr(driver, "_activador_chromedriver_log", str(chromedriver_log))
+            setattr(driver, "_activador_user_data_dir", user_data_dir)
+
+            driver.execute_script(
+                "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
+            )
+
+            driver.set_page_load_timeout(Config.TIMEOUT_PAGINA)
+            driver.implicitly_wait(10)
+
+            return driver
+
+        except Exception as error:
+            ultimo_error = error
+            mensaje = str(error)
+            escribir_log(
+                f"❌ Error al crear driver Chrome (intento {intento}/{max_intentos}): {mensaje}"
+            )
+
+            with contextlib.suppress(OSError):
+                if os.path.exists(chromedriver_log):
+                    os.remove(chromedriver_log)
+
+            with contextlib.suppress(Exception):
+                if os.path.exists(user_data_dir):
+                    shutil.rmtree(user_data_dir)
+
+            cerrar_procesos_chrome_residuales()
+
+            if (
+                "user data directory is already in use" in mensaje.lower()
+                and intento < max_intentos
+            ):
+                espera = min(3, intento)
+                escribir_log(
+                    f"⏳ El perfil temporal sigue en uso. Reintentando en {espera} segundo(s)..."
+                )
+                time.sleep(espera)
+                continue
+
+            break
+
+    if ultimo_error is not None:
+        cerrar_procesos_chrome_residuales()
+        escribir_log(
+            f"❌ Error al crear driver Chrome tras {max_intentos} intentos: {ultimo_error}"
         )
 
-        driver.set_page_load_timeout(Config.TIMEOUT_PAGINA)
-        driver.implicitly_wait(10)
+    return None
 
-        return driver
-
-    except Exception as e:
-        escribir_log(f"❌ Error al crear driver Chrome: {e}")
-
-        if chromedriver_log and os.path.exists(chromedriver_log):
-            with contextlib.suppress(OSError):
-                os.remove(chromedriver_log)
-
-        if user_data_dir and os.path.exists(user_data_dir):
-            with contextlib.suppress(Exception):
-                shutil.rmtree(user_data_dir)
-
-        return None
 
 
 def scroll_y_click_forzado(driver, wait, locator, intentos=3):
