@@ -1,0 +1,13 @@
+{
+  "obs": {
+    "host": "obs1",
+    "port": 4455,
+    "password": "secret",
+    "scene": "Escena"
+  },
+  "chrome": {
+    "binary_path": "/usr/bin/google-chrome",
+    "user_data_dir": null,
+    "extra_args": ["--incognito"]
+  }
+}

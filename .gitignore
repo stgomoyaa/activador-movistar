@@ -11,3 +11,4 @@ temp_videos_y4m/
 .env
 screenshots/
 .DS_Store
+config/config.json
