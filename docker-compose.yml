@@ -1,0 +1,44 @@
+version: "3.8"
+
+services:
+  obs1:
+    build: ./docker/obs
+    container_name: obs1
+    privileged: true
+    devices:
+      - /dev/video0:/dev/video0
+    environment:
+      - OBS_PROFILE=default
+      - OBS_SCENE=Escena
+      - OBS_WEBSOCKET_PORT=4455
+      - OBS_WEBSOCKET_PASSWORD=secret
+      - OBS_DISPLAY_WIDTH=1920
+      - OBS_DISPLAY_HEIGHT=1080
+      - OBS_DISPLAY_DEPTH=24
+      - DISPLAY=:99
+    volumes:
+      - ./obs_config:/root/.config/obs-studio
+    ports:
+      - "4455:4455"
+    restart: unless-stopped
+
+  obs2:
+    build: ./docker/obs
+    container_name: obs2
+    privileged: true
+    devices:
+      - /dev/video1:/dev/video1
+    environment:
+      - OBS_PROFILE=default
+      - OBS_SCENE=Escena
+      - OBS_WEBSOCKET_PORT=4455
+      - OBS_WEBSOCKET_PASSWORD=secret
+      - OBS_DISPLAY_WIDTH=1920
+      - OBS_DISPLAY_HEIGHT=1080
+      - OBS_DISPLAY_DEPTH=24
+      - DISPLAY=:99
+    volumes:
+      - ./obs_config:/root/.config/obs-studio
+    ports:
+      - "4456:4455"
+    restart: unless-stopped
